@@ -10,7 +10,7 @@
 #snb{position:absolute;left:0;top:0;bottom:0;width:224px;
 	background-color:#d3d9df;border-right:4px solid #e4e7eb;}
 #cont{display:block;display:inline-block\0;position:relative;min-height:calc(100% - 90px);background-color:#f2f3f6;overflow:hidden;}
-.content{float:right;width:calc(100% - 224px);min-height:100%;text-align:left;}
+.content{float:right;width:calc(100% - 224px);min-height:100%;text-align:left;padding-right:160px;}
 
 /* header */
 #header h1{position:relative;text-align:left;padding-top:9px;margin-bottom:10px;}
@@ -57,17 +57,19 @@
 .snb_tit::before{position:absolute;font-family:"axicon";color:#5d95ca;}
 .snb_tit.bass::before{content:"\e021";font-size:68px;left:6px;top:0;}
 .snb h1{position:relative;font-size:15px;line-height:74px;color:#fff;text-align:left;}
-.snb_list li{}
-.snb_list li a{width:100%;padding:0 13px 0 33px;line-height:31px;}
+.snb_list li a{width:100%;padding:0 13px 0 23px;line-height:31px;}
 .snb_list > li > a:hover,
 .snb_list > li.on > a{background-color:#4086c3;color:#fff;}
 .snb_list > li > a:hover::after,
 .snb_list > li.on > a::after{float:right;content:"\f1b1";font-family:"axicon";}
-.snb_list .snb1 a{font-size:12px;line-height:16px;padding:0 0 0 43px;}
+.snb_list .snb1 a{font-size:12px;line-height:16px;padding:0 0 0 33px;}
 
 .user_info ul .axi::before,
 .nav .axi::before{margin-right:7px;}
 .copyright{padding:20px;color:#67717a;text-align:left;border-top:1px solid #9fa9b3;}
+
+/* quick_menu */
+.quick{position:fixed;right:10px;top:200px;width:150px;}
 
 /* .main */
 .content.main{width:100%;}
