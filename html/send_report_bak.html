@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>재난방송온라인시스템_로그인_과학기술정보통신부</title>
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" type="text/css" href="../plugins/jquery-ui/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="../plugins/jqGrid/ui.jqgrid.css" />
+  <link rel="stylesheet" type="text/css" href="../plugins/jquery-ui/themes/custom/jquery-ui.theme.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../css/pop.css" />
+
+  <script src="../plugins/jquery-1.11.0.min.js" charset="utf-8"></script>
+  <script src="../plugins/jquery-ui/jquery-ui.min.js" charset="utf-8"></script>
+  <script src="../plugins/jqGrid/jquery.jqGrid.min.js" type="text/javascript"></script>
+  <script src="../plugins/jqGrid/i18n/grid.locale-kr.js" type="text/javascript"></script>
+  <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js" type="text/javascript"></script>
+  <script src="../js/common.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+<!-- popup_기존통보문 -->
+<div class="overlay" style="display:none;">
+  <div class="pop_wrap" dataformat="modal" style="width:900px;height:500px;margin:-250px 0 0 -450px;">
+    <div class="pop_tit">
+      <h1>기존통보문</h1>
+      <span>
+        <a href="" role="btn_close" class="btn_pop_close"></a>
+      </span>
+    </div>
+    <div class="pop_body">
+      <div class="article">
+        <div class="article_tit blind">
+          <h2>상세내용</h2>
+        </div>
+        <div class="article_body">
+          <table id="jqGrid" class="jq-grid"></table>
+          <script type="text/javascript">
+          var mydata = [
+            {"tit":"제목","size":"규모","send_time":"2018-09-12 22:16:20","send_yn":"발송","disaster_area":"강원","send_area":"강원,경기,서울"},
+            {"tit":"제목","size":"규모","send_time":"2018-09-12 22:16:20","send_yn":"발송","disaster_area":"강원","send_area":"강원,경기,서울"},
+            {"tit":"제목","size":"규모","send_time":"2018-09-12 22:16:20","send_yn":"발송","disaster_area":"강원","send_area":"강원,경기,서울"},
+            {"tit":"제목","size":"규모","send_time":"2018-09-12 22:16:20","send_yn":"발송","disaster_area":"강원","send_area":"강원,경기,서울"},{"tit":"제목","size":"규모","send_time":"2018-09-12 22:16:20","send_yn":"발송","disaster_area":"강원","send_area":"강원,경기,서울"}
+          ];
+          $(document).ready(function () {
+
+            var grid = $("#jqGrid");
+            var getUniqueNames = function (columnName) {
+                var texts = grid.jqGrid('getCol',columnName), uniqueTexts = [],
+                    textsLength = texts.length, text, textsMap = {}, i;
+                for (i=0;i<textsLength;i++) {
+                    text = texts[i];
+                    if (text !== undefined && textsMap[text] === undefined) {
+                        // to test whether the texts is unique we place it in the map.
+                        textsMap[text] = true;
+                        uniqueTexts.push(text);
+                    }
+                }
+                return uniqueTexts;
+            };
+            grid.jqGrid({
+              data: mydata,
+              datatype: "local",
+              // url:,
+              // datatype: "json",
+              editurl: 'clientArray',
+              colModel: [
+                { label: '제목', name: 'tit', width: 500},
+                { label: '규모', name: 'size', width: 150, align:'center'},
+                { label: '통보시각', name: 'send_time', width: 320,stype:"select", align:'center', align:'center'},
+                { label: '통보여부', name: 'send_yn', width: 180,stype:"select", align:'center'},
+                { label: '재난지역', name: 'disaster_area', width: 180, align: 'center'},
+                { label: '통보지역', name: 'send_area', width: 350},
+              ],
+              height: 350,
+              sortname: 'org',
+              rownumbers: true,
+              rownumWidth: 25,
+              rowTotal: -1,
+              jsonReader : {repeatitems : false}
+            });
+          });
+          </script>
+        </div>
+      </div>
+    </div>
+    <div class="pop_btn_wrap">
+      <a href="" class="btn btn_red" role="btn_close">저장</a>
+      <a href="" class="btn btn_blue" role="btn_close">수정</a>
+      <a href="" class="btn btn_lightgray" role="btn_close">닫기</a>
+    </div>
+  </div>
+</div>
+<!-- popup_기존통보문__e -->
+
+<div id="wrap">
+  <div id="header">
+    <h1><a href="">재난방송<strong>온라인시스템</strong></a></h1>
+    <div class="nav_wrap">
+      <div class="gnb">
+        <ul class="gnb_list">
+          <li>홍길동</li>
+          <li><a href="" class="btn_userinfo divide">내정보</a></li>
+          <li><a href="" class="btn_logout">로그아웃</a></li>
+        </ul>
+      </div>
+      <div class="lnb">
+        <ul class="lnb_list nav">
+          <li><a href="#">통보문수신</a>
+            <ul class="sub1">
+              <li><a href="#">통보문 수신내역</a></li>
+            </ul>
+          </li>
+          <li><a href="#">통보문발신</a>
+            <ul class="sub1">
+              <li><a href="#">통보문 생성/발신</a></li>
+              <li><a href="#">훈련/테스트 발신</a></li>
+              <li><a href="#">공지사항 발신</a></li>
+              <li><a href="#">발신이력</a></li>
+            </ul>
+          </li>
+          <li><a href="#">조치현황</a>
+            <ul class="sub1">
+              <li><a href="#">담당자별 조치현황</a></li>
+              <li><a href="#">재난방송 조치현황</a></li>
+              <li><a href="#">수동발송</a></li>
+              <li><a href="#">FAX/LMS 발송이력</a></li>
+            </ul>
+          </li>
+          <li><a href="#">재난방송수신 클라이언트</a>
+            <ul class="sub1">
+              <li><a href="#">클라이언트 관리</a></li>
+              <li><a href="#">클라이언트 그룹관리</a></li>
+              <li><a href="#">클라이언트 정보변경요청</a></li>
+              <li><a href="#">클라이언트 접속현황</a></li>
+              <li><a href="#">교육이수결과</a></li>
+            </ul>
+          </li>
+          <li><a href="#">기초정보관리</a>
+            <ul class="sub1">
+              <li><a href="#">공통코드</a></li>
+              <li><a href="#">사용자 관리</a></li>
+              <li><a href="#">연계기관</a></li>
+              <li><a href="#">통보문 템플릿</a></li>
+            </ul>
+          </li>
+          <li><a href="#">시스템관리</a>
+            <ul class="sub1">
+              <li><a href="#">시스템설정</a></li>
+              <li><a href="#">권한관리</a></li>
+              <li><a href="#">메뉴관리</a></li>
+              <li><a href="#">로그관리</a></li>
+              <li><a href="#">연계시스템 로그</a></li>
+            </ul>
+          </li>
+          <li><a href="#">통합게시판</a>
+            <ul class="sub1">
+              <li><a href="#">자료실</a></li>
+              <li><a href="#">시스템공지</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="lnb_overlay"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cont">
+
+    <!-- snb -->
+  	<div id="snb" class="snb">
+      <div class="snb_wrap">
+        <div class="snb_tit bass">
+          <h1>통보문발신</h1>
+        </div>
+        <ul class="snb_list">
+          <li><a href="#" class="on">통보문 생성/발신</a></li>
+          <li><a href="#">훈련/테스트 발신</a></li>
+          <li><a href="#">공지사항 발신</a></li>
+          <li><a href="#">발신이력</a></li>
+        </ul>
+      </div>
+      <p class="copyright">© Ministry of Science and ICT. All rights reserved.</p>
+    </div>
+    <!-- snb__e -->
+
+    <!-- content -->
+    <div class="content">
+      <div class="cont_tit">
+        <h1>통보문생성/발신<span>통보문발신</span></h1>
+        <div class="locate">
+          <ul>
+            <li><a href="#"><i class="axi axi-ion-home" title="home"></i></a></li>
+            <li><a href="#">통보문발신</a></li>
+            <li>통보문생성/발신</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cont_body tmpl_wrap">
+        <div class="section fl" style="width:calc(100% - 550px);">
+          <div class="article">
+            <div class="article_tit">
+              <h2>통보문 내용</h2>
+            </div>
+            <div class="article_body">
+              <dl class="dl_form_use_grid dl_devide_8 tmpl_send">
+                <dt><label for="">템플릿</label></dt>
+                <dd class="w_7 select_wrap">
+                  <select name="" id=""><option value="">전체</option></select>
+                  <select name="" id=""><option value="">지진/지진속보</option></select>
+                  <select name="" id=""><option value="">경보</option></select>
+                  <a href="" class="btn btn_blue_line">불러오기</a>
+                  <a href="" class="btn btn_blue divide">기존통보문 사용</a>
+                </dd>
+                <dt class="required"><label for="">생성처</label></dt>
+                <dd class="w_3">
+                  <select name="" id=""><option value="">전체</option></select>
+                </dd>
+                <dt class="required"><label for="">발송처</label></dt>
+                <dd class="w_3">
+                  <select name="" id=""><option value="">전체</option></select>
+                </dd>
+                <dt class="required"><label for="">재난지역</label></dt>
+                <dd class="w_7">
+                  <ul class="li_area">
+                    <li><input type="checkbox" id="area01"><label for="area01">전국</label></li>
+                    <li><input type="checkbox" id="area02"><label for="area02">서울</label></li>
+                    <li><input type="checkbox" id="area03"><label for="area03">경기</label></li>
+                    <li><input type="checkbox" id="area04"><label for="area04">인천</label></li>
+                    <li><input type="checkbox" id="area05"><label for="area05">대전</label></li>
+                    <li><input type="checkbox" id="area06"><label for="area06">세종</label></li>
+                    <li><input type="checkbox" id="area07"><label for="area07">광주</label></li>
+                    <li><input type="checkbox" id="area08"><label for="area08">부산</label></li>
+                    <li><input type="checkbox" id="area09"><label for="area09">울산</label></li>
+                    <li><input type="checkbox" id="area10"><label for="area10">대구</label></li>
+                    <li><input type="checkbox" id="area11"><label for="area11">강원</label></li>
+                    <li><input type="checkbox" id="area12"><label for="area12">충북</label></li>
+                    <li><input type="checkbox" id="area13"><label for="area13">충남</label></li>
+                    <li><input type="checkbox" id="area14"><label for="area14">전북</label></li>
+                    <li><input type="checkbox" id="area15"><label for="area15">전남</label></li>
+                    <li><input type="checkbox" id="area16"><label for="area16">경북</label></li>
+                    <li><input type="checkbox" id="area17"><label for="area17">경남</label></li>
+                    <li><input type="checkbox" id="area18"><label for="area18">제주</label></li>
+                  </ul>
+                </dd>
+                <dt class="required"><label for="">발생시각</label></dt>
+                <dd class="w_1-6">
+                  <span class="search_period">
+                    <input type="text" id="" placeholder="YYYY/MM /DD" readonly class="date" dataformat="datepicker" required />
+                  </span>
+                </dd>
+                <dt class="required w_-9"><label for="">규모</label></dt>
+                <dd class="w_-9"><input type="text" /></dd>
+                <dt class="required w_-9"><label for="">위도</label></dt>
+                <dd class="w_-9"><input type="text" /></dd>
+                <dt class="required w_-9"><label for="">경도</label></dt>
+                <dd class="w_-9"><input type="text" /></dd>
+                <dt class="required"><label for="">제목</label></dt>
+                <dd class="w_7">
+                  <input type="text" />
+                </dd>
+                <dt class="required"><label for="">내용</label></dt>
+                <dd class="w_7">
+                  <textarea name="name" rows="24" cols="80"></textarea>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="section fr" style="width:550px;">
+          <div class="article">
+            <div class="arti_section mgTop25 box_arti_section">
+              <div class="arti_tit">
+                <h3>수신자</h3>
+              </div>
+              <div class="arti_body">
+                <dl class="dl_form_use_grid dl_devide_9 dd_right">
+                  <dt class="w_2"><label for="">PC클라이언트</label></dt>
+                  <dd><a href="" class="btn_toggle" datavalue="on">사용여부 버튼</a></dd>
+                  <dt class="w_2"><label for="">자동자막</label></dt>
+                  <dd><a href="" class="btn_toggle" datavalue="on">사용여부 버튼</a></dd>
+                  <dt class="w_2"><label for="">MMS</label></dt>
+                  <dd><a href="" class="btn_toggle" datavalue="on">사용여부 버튼</a></dd>
+                  <dt class="w_2"><label for="">FAX</label></dt>
+                  <dd><a href="" class="btn_toggle" datavalue="on">사용여부 버튼</a></dd>
+                  <dt class="w_2"><label for="">라디오</label></dt>
+                  <dd><a href="" class="btn_toggle" datavalue="on">사용여부 버튼</a></dd>
+                  <dt class="w_2"><label for="">신규통보</label></dt>
+                  <dd><a href="" class="btn_toggle" datavalue="on">사용여부 버튼</a></dd>
+                </dl>
+                <dl class="dl_form_use_grid dl_devide_9">
+                  <dt class="w_2"><label for="">수신그룹</label></dt>
+                  <dd class="w_7 mgBtm02">
+                    <div class="tab_v">
+                      <ul>
+                        <li class="on"><a href="#tab01">지역</a></li>
+                        <li><a href="#tab02">그룹</a></li>
+                      </ul>
+                    </div>
+                    <div id="tab01" class="tab_contents_v sendgroup_list">
+                      <ul sendgroup>
+                        <li>
+                          <label for="sel01"><input type="checkbox" title="선택" id="sel01" />전국</label>
+                        </li>
+                        <li>
+                          <label for="sel02"><input type="checkbox" title="선택" id="sel02" checked  />서울</label>
+                        </li>
+                        <li>
+                          <label for="sel03"><input type="checkbox" title="선택" id="sel03" />경기</label>
+                        </li>
+                        <li>
+                          <label for="sel04"><input type="checkbox" title="선택" id="sel04" />인천</label>
+                        </li>
+                      </ul>
+                    </div>
+                    <div id="tab02" class="tab_contents_v sendgroup_list">
+                      <ul sendgroup>
+                        <li>
+                          <label for="sel05"><input type="checkbox" title="선택" id="sel05" />GPS전파혼신</label>
+                        </li>
+                        <li>
+                          <label for="sel06"><input type="checkbox" title="선택" id="sel06" checked  />시스템관리자</label>
+                        </li>
+                        <li>
+                          <label for="sel07"><input type="checkbox" title="선택" id="sel07" />종합유선_위성방송_IPTV</label>
+                        </li>
+                        <li>
+                          <label for="sel08"><input type="checkbox" title="선택" id="sel08" />방송재난 10개방송사</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="arti_section box_arti_section">
+              <div class="arti_tit">
+                <h3>자동자막</h3>
+                <span class="fr">
+                  <a href="" class="btn_toggle" datavalue="off">사용여부 버튼</a>
+                </span>
+              </div>
+              <div class="arti_body">
+                <dl class="dl_form_use_grid dl_devide_9">
+                  <dt class="w_2"><label for="">자막방식</label></dt>
+                  <dd class="w_7"><select name="" id=""><option value="">고정자막(1줄)</option></select></dd>
+                  <dt class="w_2"><label for="">내용</label></dt>
+                  <dd class="w_3-4 mr-2">
+                    <input type="checkbox" id="kr" checked/> <label for="kr">기본자막 (한글)</label>
+                    <textarea name="" id="" cols="100" rows="4"></textarea>
+                  </dd>
+                  <dd class="w_3-4">
+                    <input type="checkbox" id="en" /> <label for="en">추가자막 (영문)</label>
+                    <textarea name="" id="" cols="100" rows="4"></textarea>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="arti_section box_arti_section">
+              <div class="arti_tit">
+                <h3>라디오방송</h3>
+                <span class="fr">
+                  <a href="" class="btn_toggle" datavalue="off">사용여부 버튼</a>
+                </span>
+              </div>
+              <div class="arti_body">
+                <dl class="dl_form_use_grid dl_devide_9">
+                  <dt class="w_2"><label for="">내용</label></dt>
+                  <dd class="w_7"><textarea name="" id="" cols="100" rows="5"></textarea></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article_bot btn_area">
+          <a href="" class="btn btn_red">통보문 생성</a>
+        </div>
+      </div>
+    </div>
+    <!-- content__e -->
+  </div>
+
+</div>
+</body>
+</html>
+<script type="text/javascript">
+$(function(){
+  init();
+  //수신그룹 체크
+  var pre, sendChecked,
+      sendGroup = $('[sendgroup]').find(':checkbox');
+  sendGroup.each(function(index){
+    sendChecked = sendGroup.eq(index)[0]['checked'];
+    if(sendChecked) bgOn(sendGroup.eq(index));
+  });
+  sendGroup.on('change',function(){
+    bgOn($(this));
+  });
+  function bgOn(el){
+    //초기화, 복수선택할 시 삭제
+    sendGroup.removeProp('checked').parents('li').removeClass('on');
+
+    //선택된 수신그룹 on
+    pre = el.prop('checked','checked');
+    elParents = el.parents('li');
+    (pre) ? elParents.addClass('on') : elParents.removeClass('on');
+  }
+  //수신그룹 탭
+  var tabCont = $('.tab_contents_v'),
+      tabBtn = $('.tab_v a');
+  tabCont.first().show();
+  tabBtn.on('click',function(e){
+    e.preventDefault();
+    var tabContOn = $(this).attr('href');
+    tabCont.hide();
+    tabBtn.parents('li').removeClass('on');
+    $(this).parents('li').addClass('on');
+    $(tabContOn).show();
+  })
+});
+</script>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>재난방송온라인시스템_로그인_과학기술정보통신부</title>
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" type="text/css" href="../plugins/jquery-ui/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="../plugins/jqGrid/ui.jqgrid.css" />
+  <link rel="stylesheet" type="text/css" href="../plugins/jquery-ui/themes/custom/jquery-ui.theme.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../css/pop.css" />
+
+  <script src="../plugins/jquery-1.11.0.min.js" charset="utf-8"></script>
+  <script src="../plugins/jquery-ui/jquery-ui.min.js" charset="utf-8"></script>
+  <script src="../plugins/jqGrid/jquery.jqGrid.min.js" type="text/javascript"></script>
+  <script src="../plugins/jqGrid/i18n/grid.locale-kr.js" type="text/javascript"></script>
+  <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js" type="text/javascript"></script>
+  <script src="../js/common.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <div class="overlay" style="display:none;">
+    <div class="pop_wrap" dataformat="modal" style="width:450px;margin:-200px 0 0 -200px;">
+      <div class="pop_tit">
+        <h1>권한등록</h1>
+        <span>
+          <a href="" role="btn_close" class="btn_pop_close"></a>
+        </span>
+      </div>
+      <div class="pop_body">
+        <div class="article">
+          <div class="article_tit blind">
+            <h2>그룹 추가</h2>
+          </div>
+          <div class="article_body">
+            <dl class="dl_form">
+              <dt><label for="">그룹명</label></dt>
+              <dd><input type="text" class="full" /></dd>
+              <dt><label for="">설명</label></dt>
+              <dd><input type="text" class="full"></dd>
+              <dt><label for="">사용여부</label></dt>
+              <dd><a href="" class="btn_toggle" datavalue="on">사용여부 버튼</a></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="pop_btn_wrap">
+        <a href="" class="btn btn_red">저장</a>
+        <a href="" class="btn btn_gray" role="btn_close">닫기</a>
+      </div>
+    </div>
+  </div>
+<div id="wrap">
+  <div id="header">
+    <h1><a href="">재난방송<strong>온라인시스템</strong></a></h1>
+    <div class="nav_wrap">
+      <div class="gnb">
+        <ul class="gnb_list">
+          <li>홍길동</li>
+          <li><a href="" class="btn_userinfo divide">내정보</a></li>
+          <li><a href="" class="btn_logout">로그아웃</a></li>
+        </ul>
+      </div>
+      <div class="lnb">
+        <ul class="lnb_list nav">
+          <li><a href="#">통보문수신</a>
+            <ul class="sub1">
+              <li><a href="#">통보문 수신내역</a></li>
+            </ul>
+          </li>
+          <li><a href="#">통보문발신</a>
+            <ul class="sub1">
+              <li><a href="#">통보문 생성/발신</a></li>
+              <li><a href="#">훈련/테스트 발신</a></li>
+              <li><a href="#">공지사항 발신</a></li>
+              <li><a href="#">발신이력</a></li>
+            </ul>
+          </li>
+          <li><a href="#">조치현황</a>
+            <ul class="sub1">
+              <li><a href="#">담당자별 조치현황</a></li>
+              <li><a href="#">재난방송 조치현황</a></li>
+              <li><a href="#">수동발송</a></li>
+              <li><a href="#">FAX/LMS 발송이력</a></li>
+            </ul>
+          </li>
+          <li><a href="#">재난방송수신 클라이언트</a>
+            <ul class="sub1">
+              <li><a href="#">클라이언트 관리</a></li>
+              <li><a href="#">클라이언트 그룹관리</a></li>
+              <li><a href="#">클라이언트 정보변경요청</a></li>
+              <li><a href="#">클라이언트 접속현황</a></li>
+              <li><a href="#">교육이수결과</a></li>
+            </ul>
+          </li>
+          <li><a href="#">기초정보관리</a>
+            <ul class="sub1">
+              <li><a href="#">공통코드</a></li>
+              <li><a href="#">사용자 관리</a></li>
+              <li><a href="#">연계기관</a></li>
+              <li><a href="#">통보문 템플릿</a></li>
+            </ul>
+          </li>
+          <li><a href="#">시스템관리</a>
+            <ul class="sub1">
+              <li><a href="#">시스템설정</a></li>
+              <li><a href="#">권한관리</a></li>
+              <li><a href="#">메뉴관리</a></li>
+              <li><a href="#">로그관리</a></li>
+              <li><a href="#">연계시스템 로그</a></li>
+            </ul>
+          </li>
+          <li><a href="#">통합게시판</a>
+            <ul class="sub1">
+              <li><a href="#">자료실</a></li>
+              <li><a href="#">시스템공지</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="lnb_overlay"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cont">
+
+    <!-- snb -->
+  	<div id="snb" class="snb">
+      <div class="snb_wrap">
+        <div class="snb_tit bass">
+          <h1>재난방송 수신 클라이언트</h1>
+        </div>
+        <ul class="snb_list">
+          <li><a href="#">클라이언트 관리</a></li>
+          <li><a href="#">클라이언트 그룹관리</a></li>
+          <li><a href="#">클라이언트 정보변경요청</a></li>
+          <li><a href="#">클라이언트 접속현황</a></li>
+          <li><a href="#">교육이수결과</a></li>
+        </ul>
+      </div>
+      <p class="copyright">© Ministry of Science and ICT. All rights reserved.</p>
+    </div>
+    <!-- snb__e -->
+
+    <!-- content -->
+    <div class="content">
+      <div class="cont_tit">
+        <h1>클라이언트 그룹관리<span>재난방송 수신 클라이언트</span></h1>
+        <div class="locate">
+          <ul>
+            <li><a href="#"><i class="axi axi-ion-home" title="home"></i></a></li>
+            <li><a href="#">재난방송 수신 클라이언트</a></li>
+            <li>클라이언트 그룹관리</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cont_body">
+        <div class="article">
+          <div class="arti_section fl section_linked_s" style="width:28%;">
+            <div class="article_tit">
+              <h2>그룹목록</h2>
+              <span class="fr">
+                <a href="" class="btn_axi axi_red btn_add">추가</a>
+              </span>
+            </div>
+            <div class="article_body client_group_wrap">
+              <ul class="client_group">
+                <li class="on">
+                  DB_Work
+                  <span>10개 방송사 계정</span>
+                  <div class="control">
+                    <span class="use_yn divide_r">사용중</span>
+                    <select sel_menu title="메뉴">
+                      <option value="0">초기화</option>
+                      <option value="1">사용안함</option>
+                      <option value="2">수정</option>
+                      <option value="3">삭제</option>
+                    </select>
+                  </div>
+                </li>
+                <li>
+                  GPS
+                  <span>GPS 전파혼신</span>
+                  <div class="control">
+                    <span class="use_yn divide_r">사용중</span>
+                    <select sel_menu title="메뉴">
+                      <option value="0">초기화</option>
+                      <option value="1">사용안함</option>
+                      <option value="2">수정</option>
+                      <option value="3">삭제</option>
+                    </select>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="arti_section fr" style="width:68%;">
+            <div class="article_tit">
+              <h2>그룹원</h2>
+              <span class="fr">
+                <a href="" class="btn_axi axi_red btn_save">저장</a>
+                <a href="" class="btn_axi axi_mint btn_edit">수정</a>
+                <a href="" class="btn_axi axi_gray btn_cancel">취소</a>
+              </span>
+            </div>
+            <div class="article_body">
+              <table id="jqGrid" class="jq-grid"></table>
+              <script type="text/javascript">
+              var mydata = [
+                {"division":"자동자막시스템","org":"KBS","director":"홍길동(kbs_client)","area":"서울"},
+                {"division":"대구","org":"MBC","director":"홍이동(mbc_client)","area":"서울"},
+                {"division":"경북","org":"CBS","director":"홍삼동(cbs_client)","area":"경기"}
+              ];
+              $(document).ready(function () {
+
+                var grid = $("#jqGrid"),
+                    originH = 665,
+                    foldH = 324,
+                    foldItem = $('.add_member'),
+                    getUniqueNames = function (columnName) {
+                      var texts = grid.jqGrid('getCol',columnName), uniqueTexts = [],
+                          textsLength = texts.length, text, textsMap = {}, i;
+                      for (i=0;i<textsLength;i++) {
+                          text = texts[i];
+                          if (text !== undefined && textsMap[text] === undefined) {
+                              // to test whether the texts is unique we place it in the map.
+                              textsMap[text] = true;
+                              uniqueTexts.push(text);
+                          }
+                      }
+                      return uniqueTexts;
+                  };
+                grid.jqGrid({
+                  data: mydata,
+                  datatype: "local",
+                  // url:,
+                  // datatype: "json",
+                  editurl: 'clientArray',
+                  colModel: [
+                    { label: '기관', name: 'org', width: 200, align: 'center' },
+                    { label: '담당자', name: 'director', width: 150, align:'center'},
+                    { label: '지역', name: 'area', width:300}
+                  ],
+                  height: originH,
+                  sortname: 'org',
+                  rownumbers: true,
+                  rownumWidth: 25,
+                  rowTotal: -1,
+                  multiselect: true,
+                  jsonReader : {repeatitems : false}
+                });
+
+                // foldEVT
+                $('.btn_edit').on('click',function(e){
+                  foldTbl(e);
+                });
+                $('.btn_save').on('click',function(e){
+                  foldTbl(e);
+                });
+                function foldTbl(e){
+                  e.preventDefault();
+                  var presentH = grid.parents('.ui-jqgrid-bdiv').height();
+                  (presentH == originH) ? grid.setGridHeight(foldH) : grid.setGridHeight(originH);
+                  foldItem.toggle();
+                  jqgridInit();
+                }
+
+              });
+              </script>
+
+              <div class="arti_section add_member">
+                <div class="btn_wrap">
+                  <a href="" class="btn_axi btn_arr_up axi_red">선택 추가</a>
+                  <a href="" class="btn_axi btn_arr_down axi_mint">선택 제거</a>
+                </div>
+                <div class="arti_tit">
+                  <h3>클라이언트 전체목록</h3>
+                </div>
+                <div class="article_body">
+                  <table id="jqGrid2" class="jq-grid"></table>
+                  <script type="text/javascript">
+
+                    var grid2 = $("#jqGrid2");
+                    var getUniqueNames = function (columnName) {
+                        var texts = grid2.jqGrid('getCol',columnName), uniqueTexts = [],
+                            textsLength = texts.length, text, textsMap = {}, i;
+                        for (i=0;i<textsLength;i++) {
+                            text = texts[i];
+                            if (text !== undefined && textsMap[text] === undefined) {
+                                // to test whether the texts is unique we place it in the map.
+                                textsMap[text] = true;
+                                uniqueTexts.push(text);
+                            }
+                        }
+                        return uniqueTexts;
+                    };
+                    var buildSearchSelect = function (uniqueNames) {
+                        var values=":전체";
+                        $.each (uniqueNames, function() {
+                            values += ";" + this + ":" + this;
+                        });
+                        return values;
+                    };
+                    var setSearchSelect = function (columnName) {
+                      grid2.jqGrid('setColProp', columnName,
+                        {
+                          stype: 'select',
+                          searchoptions: {
+                              value:buildSearchSelect(getUniqueNames(columnName)),
+                              sopt:['eq']
+                          }
+                        }
+                      );
+                    };
+                    $(document).ready(function () {
+                        grid2.jqGrid({
+                            data: mydata,
+                            datatype: "local",
+                            editurl: 'clientArray',
+                            colModel: [
+                              { label: '기관', name: 'org', width: 200, align: 'center', searchoptions: {
+                                sopt:['cn'],
+                                dataInit: function(elem) {
+                                  $(elem).autocomplete({
+                                    source:getUniqueNames('org'),
+                                    delay:0,
+                                    minLength:0
+                                  });
+                                }
+                              }},
+                              { label: '담당자', name: 'director', width: 150, align:'center',
+                              searchoptions: {
+                                sopt:['cn'],
+                                dataInit: function(elem) {
+                                  $(elem).autocomplete({
+                                    source:getUniqueNames('org'),
+                                    delay:0,
+                                    minLength:0
+                                  });
+                                }
+                              }},
+                              { label: '지역', name: 'area', width:300, stype: "select"}
+                            ],
+                            height:200,
+                            sortname: 'org',
+                            rowTotal:-1,
+                            title: "false",
+                            multiselect: true,
+                            jsonReader : {repeatitems : false},
+                            loadComplete: function(){
+                              var htbl = $(this).parents('.ui-jqgrid-view').find('.ui-jqgrid-hdiv');
+                              htbl.addClass('tbl_sub');
+                            }
+                        });
+                        setSearchSelect('area');
+
+                        grid2.jqGrid('filterToolbar', {stringResult:false, searchOnEnter:true, defaultSearch:"cn"});
+
+                    });
+
+                    </script>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- content__e -->
+  </div>
+
+</div>
+</body>
+</html>
+<script type="text/javascript">
+  $(function(){
+    init();
+    // 그룹목록 컨트롤메뉴
+    $("[sel_menu]").selectmenu({
+        classes: {"ui-selectmenu-button": "ui-sel-btn"},
+        change: function(){
+          switch (this.value) {
+            case "1":
+              console.log('opt1:사용여부');
+              var status = $(this).prev('.use_yn').text(),
+                  opt = $(this).find('option').eq(1);
+
+              if(status == "미사용"){
+                $(this).prev('.use_yn').text("사용중");
+                opt.html("사용안함");
+              }else{
+                $(this).prev('.use_yn').text("미사용");
+                opt.html("사용함");
+               }
+              $(this).selectmenu('refresh');
+              this.value = 0;
+              break;
+            case "2":
+              console.log('opt2:수정, 팝업창 띄우면 될듯');
+              $('.overlay').show();
+              $('.pop_wrap').show();
+              this.value = 0;
+              break;
+            case "3":
+              console.log('opt3:삭제');
+              this.value = 0;
+              break;
+            default:
+              this.value = 0;
+          }
+        }
+      });
+  })
+</script>
