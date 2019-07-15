@@ -20,8 +20,7 @@
   <script src="../../plugins/jquery-ui/ui/i18n/datepicker-ko.js" type="text/javascript"></script>
   <script src="../../js/common.js" charset="utf-8"></script>
 </head>
-
-<li>
+<body>
 <div id="wrap">
   <div id="header">
     <h1><a href="">사이버견문보고관리시스템
@@ -176,9 +175,12 @@
 
     <!-- snb -->
   	<div id="snb" class="snb">
-      <div class="userInfo">
-        홍길동
-        <a href="" class="btn">로그인</a>
+      <div class="user_info">
+        <a href="#" class=""><i class="axi axi-user user"></i>홍길동</a>님
+        <ul>
+          <li><a href="#" class="axi axi-cog2"> 내정보</a></li>
+          <li><a href="#" class="axi axi-power-off"> 로그아웃</a></li>
+        </ul>
       </div>
       <div class="snb_wrap">
         <div class="snb_tit bass">
@@ -216,7 +218,7 @@
           <li><a href="">SMS발송관리</a></li>
         </ul>
       </div>
-      <p class="copyright">© Ministry of Science and ICT. All rights reserved.</p>
+      <p class="copyright">©2019 Korea Coast Guard. All rights reserved</p>
     </div>
     <!-- snb__e -->
 
@@ -226,6 +228,7 @@
         <h1>QUICK MENU</h1>
       </div>
       <div class="quick_body">
+        <a href="" class="btn_set">즐겨찾기 설정</a>
         <ul class="quick_list">
           <li><a href="">견문보고작성</a></li>
           <li><a href="">견문통계</a></li>
@@ -260,70 +263,71 @@
             </ul>
             <div id="tab01" class="tab_contents">
               <div class="article">
-              <div class="article_body">
-            <div class="search">
-              <label for="">소속</label>
-              <select name="" id="">
-                <option value="">전체</option>
-                <option value=""></option>
-              </select>
-              <label for="">제목</label>
-              <input type="text" />
-              <label for="">분야</label>
-              <select name="" id="">
-                <option value="">전체</option>
-                <option value=""></option>
-              </select>
-              <select name="" id="">
-                <option value="">전체</option>
-                <option value=""></option>
-              </select>
-              <span class="search_period">
-                <label for="">기간</label>
-                <input type="text" id="" placeholder="YYYY/MM /DD" readonly class="date" dataformat="from" required /> ~
-                <input type="text" id="" placeholder="YYYY/MM /DD" readonly class="date" dataformat="to" required />
-              </span>            
-              <a href="#" class="btn btn_skyblue">검색</a>
-              <span class="fr">
-                  <a href="" class="btn btn_red">등록</a>
-                  <a href="" class="btn btn_blue">내려받기</a>
-              </span>
-            </div>
-            <div class="arti_section">
-              <table id="jqGrid" class="jq-grid"></table>
-              <div id="pager1"></div>
-              <script type="text/javascript">
-                var mydata = [
-                  {"org":"본청","name":"관리자","spe":"해양과학(민생여론)","division":"정보/일반","tit":"제목","from":"2018-09-24","to":"2018-09-30","regist":"2018-10-11 10:20:15","reprt":"제목"}
-                ];
-                $(document).ready(function () {
-                    var grid = $("#jqGrid");
-                    grid.jqGrid({
-                        data: mydata,
-                        datatype: "local",
-                        editurl: 'clientArray',
-                        colModel: [
-                          {label:'소속', name: 'org', align:"center", width:50},
-                          {label:'성명', name: 'name',align:"center", width:80},
-                          {label:'전문분야(수집목표)', name: 'spe',align:"center", width:80},
-                          {label:'구분', name:'division',align:"center", width:80},
-                          {label:'제목', name: 'tit',align:"center", width:50},
-                          {label:'기간(From)', name: 'from', align:"center", width:90},
-                          {label:'기간(To)', name: 'to',align:"center", width:90},
-                          {label:'등록일시', name: 'regist',align:"center", width:50},
-                          {label:'견문보기', name: 'reprt'}
-                        ],
-                        height: 500,
-                        rownumbers: true, // show row numberOfMonths
-                        rownumWidth: 25,
-                        rowTotal: -1,
-                        jsonReader : {repeatitems : false}
-                    });
-                    grid.jqGrid('navGrid',"#pager1",{edit:false,add:false,del:false});
-                });
-
-              </script>
-            </div>
+                <div class="article_body">
+                  <div class="search">
+                    <label for="">소속</label>
+                    <select name="" id="">
+                      <option value="">전체</option>
+                      <option value=""></option>
+                    </select>
+                    <label for="">제목</label>
+                    <input type="text" />
+                    <label for="">분야</label>
+                    <select name="" id="">
+                      <option value="">전체</option>
+                      <option value=""></option>
+                    </select>
+                    <select name="" id="">
+                      <option value="">전체</option>
+                      <option value=""></option>
+                    </select>
+                    <span class="search_period">
+                      <label for="">기간</label>
+                      <input type="text" id="" placeholder="YYYY/MM /DD" readonly class="date" dataformat="from" required /> ~
+                      <input type="text" id="" placeholder="YYYY/MM /DD" readonly class="date" dataformat="to" required />
+                    </span>            
+                    <a href="#" class="btn btn_skyblue">검색</a>
+                    <span class="fr">
+                        <a href="" class="btn btn_red">등록</a>
+                        <a href="" class="btn btn_blue">내려받기</a>
+                    </span>
+                  </div>
+                  <div class="arti_section">
+                    <table id="jqGrid" class="jq-grid"></table>
+                    <div id="pager1"></div>
+                    <script type="text/javascript">
+                      var mydata = [
+                        {"org":"본청","name":"관리자","spe":"해양과학(민생여론)","division":"정보/일반","tit":"제목","from":"2018-09-24","to":"2018-09-30","regist":"2018-10-11 10:20:15","reprt":"제목"}
+                      ];
+                      $(document).ready(function () {
+                          var grid = $("#jqGrid");
+                          grid.jqGrid({
+                              data: mydata,
+                              datatype: "local",
+                              editurl: 'clientArray',
+                              colModel: [
+                                {label:'소속', name: 'org', align:"center", width:50},
+                                {label:'성명', name: 'name',align:"center", width:80},
+                                {label:'전문분야(수집목표)', name: 'spe',align:"center", width:80},
+                                {label:'구분', name:'division',align:"center", width:80},
+                                {label:'제목', name: 'tit',align:"center", width:50},
+                                {label:'기간(From)', name: 'from', align:"center", width:90},
+                                {label:'기간(To)', name: 'to',align:"center", width:90},
+                                {label:'등록일시', name: 'regist',align:"center", width:50},
+                                {label:'견문보기', name: 'reprt'}
+                              ],
+                              height: 500,
+                              rownumbers: true, // show row numberOfMonths
+                              rownumWidth: 25,
+                              rowTotal: -1,
+                              pager: '#pager1',
+                              jsonReader : {repeatitems : false}
+                          });
+                      });
+                    </script>
+                  </div>
+                </div>
+              </div>
             </div>
             <div id="tab02" class="tab_contents">
 
@@ -336,7 +340,7 @@
   </div>
 
 </div>
-</li>
+</body>
 </html>
 <script type="text/javascript">
   $(function(){
