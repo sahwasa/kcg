@@ -314,7 +314,7 @@
                                 {label:'기간(From)', name: 'from', align:"center", width:90},
                                 {label:'기간(To)', name: 'to',align:"center", width:90},
                                 {label:'등록일시', name: 'regist',align:"center", width:50},
-                                {label:'견문보기', name: 'reprt'}
+                                {label:'견문보기', name: 'reprt',formatter:mk_btn}
                               ],
                               height: 500,
                               rownumbers: true, // show row numberOfMonths
@@ -323,6 +323,13 @@
                               pager: '#pager1',
                               jsonReader : {repeatitems : false}
                           });
+
+                          function mk_btn(cellValue, options, rowdata, action){
+                            var html;
+                            var cellValue = cellValue + "";
+                              html = "<a class='axi btn_down' href='#;' onclick='hello();return false;' title='수신파일 다운로드'>수신파일 다운로드</a>";
+                            return html;
+                          }
                       });
                     </script>
                   </div>
