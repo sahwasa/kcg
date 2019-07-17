@@ -1,0 +1,101 @@
+@@include('../../inc/top.html')
+<body>
+<div id="wrap">
+  @@include('../../inc/header.html')
+  <div id="cont">
+    <!-- content -->
+    <div class="content main">
+      <div id="JiSlider" class="jislider">
+          <ul>
+            <li>
+              <img src="../../img/bg1.jpg">
+              <div class="copy">
+                  소중한 정보 하나가
+                  조직과 국가의 큰힘이 됩니다
+              </div>
+            </li>
+            <li>
+              <img src="../../img/bg2.jpg">
+            </li>
+            <li>
+              <img src="../../img/bg3.jpg">
+            </li>
+          </ul>
+        </div>
+          <script src="../../js/JiSlider.js"></script>
+          <script>
+            $(window).load(function () {
+              $('#JiSlider').JiSlider({color: '#fff', start: 3, reverse: true}).addClass('ff')
+            })
+          </script>
+          <script type="text/javascript">
+      
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+      
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      
+      </script>
+    </div>
+    <div class="notice_area">
+      <p>[긴급]긴급전달사항 공지합니다.</p>
+    </div>
+    <div class="main_cont">
+      <div class="section">
+        <div class="login article">
+          <h1>LOGIN</h1>
+          <div class="logipt">
+            <input type="text" placeholder="아이디" />
+            <input type="password" placeholder="비밀번호">
+            <a href="" class="btn_log">로그인</a>
+          </div>
+          <div class="remember">
+            <input type="checkbox"><label for="">아이디 저장</label>
+            <span>
+              <a href="">아이디 찾기</a>
+              <a href="">비밀번호 찾기</a>
+            </span>
+          </div>
+        </div>
+        <div class="notice article">
+          <h1>공지사항</h1>
+          <a href="" class="btn_more">더보기</a>
+          <ul class="dot_list">
+            <li><a href=""></a>최근 5년간 해상조난사고 통계 연보<span>2018-09-01</span></li>
+            <li><a href=""></a>최근 5년간 해상조난사고 통계 연보<span>2018-09-01</span></li>
+            <li><a href=""></a>최근 5년간 해상조난사고 통계 연보<span>2018-09-01</span></li>
+            <li><a href=""></a>최근 5년간 해상조난사고 통계 연보<span>2018-09-01</span></li>
+          </ul>
+        </div>
+        <div class="notice article">
+          <h1>자유게시판</h1>
+          <a href="" class="btn_more">더보기</a>
+          <ul class="dot_list">
+            <li><a href=""></a>최근 5년간 해상조난사고 통계 연보<span>2018-09-01</span></li>
+            <li><a href=""></a>최근 5년간 해상조난사고 통계 연보<span>2018-09-01</span></li>
+            <li><a href=""></a>최근 5년간 해상조난사고 통계 연보<span>2018-09-01</span></li>
+            <li><a href=""></a>최근 5년간 해상조난사고 통계 연보<span>2018-09-01</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="banner">
+        <ul class="banner_list">
+          <li><a href="">해양수산부</a></li>
+          <li><a href="">한국어촌어항공단</a></li>
+          <li><a href="">해상교통관제센터</a></li>
+          <li><a href="">해양환경공단</a></li>
+          <li><a href="">한국해운조합</a></li>
+          <li><a href="">해양수산부-중앙해양안전심판원</a></li>
+          <li><a href="">해양수산부-해운항만물류정보시스템</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- content__e -->
+  @@include('../../inc/footer.html')
