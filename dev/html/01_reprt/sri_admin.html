@@ -19,9 +19,10 @@
       <div class="cont_body">
         <div class="tab_wrap">
             <ul class="tab">
-              <li class="on"><a href="#tab01">SRI관리</a></li>
-              <li><a href="#tab02">SRI응답견문</a></li>
+              <li><a href="#" tabIndex="tab01">SRI관리</a></li>
+              <li><a href="#" tabIndex="tab02">SRI응답견문</a></li>
             </ul>
+            
             <div id="tab01" class="tab_contents">
               <div class="article">
                 <div class="article_body">
@@ -53,7 +54,7 @@
                         <a href="" class="btn btn_blue">내려받기</a>
                     </span>
                   </div>
-                  <div class="arti_section">
+                  <div class="arti_section" jq-grid-wrap>
                     <table id="jqGrid" class="jq-grid"></table>
                     <div id="pager1"></div>
                     <script type="text/javascript">
@@ -68,14 +69,14 @@
                               editurl: 'clientArray',
                               colModel: [
                                 {label:'소속', name: 'org', align:"center", width:50},
-                                {label:'성명', name: 'name',align:"center", width:80},
-                                {label:'전문분야(수집목표)', name: 'spe',align:"center", width:80},
+                                {label:'성명', name: 'name',align:"center", width:60},
+                                {label:'전문분야(수집목표)', name: 'spe',align:"center", width:100},
                                 {label:'구분', name:'division',align:"center", width:80},
-                                {label:'제목', name: 'tit',align:"center", width:50},
-                                {label:'기간(From)', name: 'from', align:"center", width:90},
-                                {label:'기간(To)', name: 'to',align:"center", width:90},
-                                {label:'등록일시', name: 'regist',align:"center", width:50},
-                                {label:'견문보기', name: 'reprt',formatter:mk_btn}
+                                {label:'제목', name:'tit',align:"center"},
+                                {label:'기간(From)', name:'from', align:"center", width:80},
+                                {label:'기간(To)', name: 'to',align:"center", width:80},
+                                {label:'등록일시', name: 'regist',align:"center", width:120},
+                                {label:'견문보기', name: 'reprt',  width:80,align:"center",formatter:mk_btn}
                               ],
                               height: 400,
                               rownumbers: true, // show row numberOfMonths
@@ -88,7 +89,7 @@
                           function mk_btn(cellValue, options, rowdata, action){
                             var html;
                             var cellValue = cellValue + "";
-                              html = "<a class='axi btn_down' href='#;' onclick='hello();return false;' title='수신파일 다운로드'>수신파일 다운로드</a>";
+                              html = "<a class='btn btn_white' href='#;' onclick='hello();return false;' title='견문보기'>견문보기</a>";
                             return html;
                           }
                       });
@@ -97,8 +98,75 @@
                 </div>
               </div>
             </div>
-            <div id="tab02" class="tab_contents">
 
+            <div id="tab02" class="tab_contents">
+              <div class="article">
+                  <div class="article_body">
+                    <div class="search">
+                      <label for="">소속</label>
+                      <select name="" id="">
+                        <option value="">전체</option>
+                        <option value=""></option>
+                      </select>
+                      <span class="search_period">
+                        <label for="">일자</label>
+                        <input type="text" id="" placeholder="YYYY-MM-DD" readonly class="date" dataformat="datepic" required />
+                      </span>
+                      <label for="">SRI</label>
+                      <select name="" id="">
+                        <option value="">선택</option>
+                        <option value=""></option>
+                      </select>         
+                      <a href="#" class="btn btn_skyblue">검색</a>
+                      <span class="fr">
+                        <a href="" class="btn btn_blue">내려받기</a>
+                      </span>
+                    </div>
+                    <div class="arti_section" jq-grid-wrap>
+                      <table id="jqGrid2" class="jq-grid"></table>
+                      <div id="pager2"></div>
+                      <script type="text/javascript">
+                        var mydata2 = [
+                          {"doc":"본청-11","division":"정보","date":"2018-09-14","org":"본청","part":"정보과","name":"관리자","tit":"제목","eval":"판단","dtls":"상보","spe":"해양과학(민생여론)","attach":"첨부"}
+                        ];
+                        $(document).ready(function () {
+                            var grid2 = $("#jqGrid2");
+                            grid2.jqGrid({
+                                data: mydata2,
+                                datatype: "local",
+                                editurl: 'clientArray',
+                                colModel: [
+                                  {label:'문서번호', name: 'doc', align:"center", width:50},
+                                  {label:'구분', name: 'division',align:"center", width:50},
+                                  {label:'보고일시', name: 'date',align:"center", width:80},
+                                  {label:'소속', name:'org',align:"center", width:60},
+                                  {label:'부서', name: 'part',align:"center", width:50},
+                                  {label:'성명', name: 'name', align:"center", width:50},
+                                  {label:'제목', name: 'tit',align:"center"},
+                                  {label:'평가', name: 'eval',align:"center", width:50},
+                                  {label:'상보', name: 'dtls',align:"center", width:50},
+                                  {label:'전문분야(수집목표)', name: 'spe',align:"center", width:100},
+                                  {label:'첨부파일', name:'attach', align:"center", width:90, formatter:mk_btn}
+                                ],
+                                height: 400,
+                                rownumbers: true,
+                                rownumWidth: 25,
+                                rowTotal: -1,
+                                pager: '#pager2',
+                                jsonReader : {repeatitems : false}
+                            });
+  
+                            function mk_btn(cellValue, options, rowdata, action){
+                              var html;
+                              var cellValue = cellValue + "";
+                                html = "<a class='ico_only btn_excel' href='#;' onclick='' title='첨부파일'>첨부파일</a> <a class='ico_only btn_hwp' href='#;' onclick='' title='첨부파일'>첨부파일</a>";
+                              return html;
+                            }
+                        });
+                      </script>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
@@ -106,3 +174,6 @@
     </div>
     <!-- content__e -->
     @@include('../../inc/footer.html')
+  </div>
+</body>
+</html>

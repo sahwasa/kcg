@@ -2,26 +2,39 @@ $(function(){
 	// nav
 	var $nav=$('.nav'),
     	$deps1=$('.nav>li'),
-    	$deps2=$('.nav ul li'),
-			$snb=$('.snb_list>li'),
+    	$deps2=$('.sub1 > li'),
+    	$deps3=$('.sub2 > li'),
+			$snb=$('.snb_list > li'),
+			$snb1=$('.snb1 > li'),
     	preLocate,deps1Locate,deps2Locate,
-    	indexDeps1,getDeps,indexDeps2,
+    	indexDeps1,getDeps,indexDeps2,indexDeps3,
     	locate=window.location.href;
 
 	menuInit();
-	function menuInit(){
-		$deps1.each(function(index, item){
-		var getAttr=$(this).children('a').attr('href');
-		index+=1;
-		indexDeps1=$(this).children('a').attr('href',"#?index="+ index +',1');
-		indexDeps2=$(this).find($deps2);
 
-		getDeps=$(this).children('a').attr('href');
+	function menuInit(){		
+		$deps1.each(function(index, obj){
+			var obj = $(obj);
+			var getAttr=obj.children('a').attr('href');
+				index+=1;
+				indexDeps1=obj.children('a').attr('href', getAttr + "?index="+ index +',1');
+				indexDeps2=obj.find($deps2);				
 
-			indexDeps2.each(function(index2, item){
-	      getAttr=$(this).children('a').attr('href');
+			getDeps=obj.children('a').attr('href');
+
+			indexDeps2.each(function(index2, obj){
+				var obj = $(obj);
+	      getAttr=obj.children('a').attr('href');
 	      index2+=1;
-	      indexDeps2=$(this).children('a').attr('href',"#?index="+index+',' + index2);
+				indexDeps2=obj.children('a').attr('href', getAttr + "?index="+index+',' + index2 + ',1');
+				indexDeps3=obj.find($deps3);
+
+				indexDeps3.each(function(index3, obj){
+					var obj = $(obj);
+					getAttr=obj.children('a').attr('href');
+					index3+=1;
+					indexDeps3=obj.children('a').attr('href', getAttr + "?index="+index+','+ index2 + ',' + index3);
+				});
 			});
     });
 
@@ -29,17 +42,37 @@ $(function(){
 			preLocate=locate.split("index=")[1].split(',');
 			deps1Locate=preLocate[0]-1;
 			deps2Locate=preLocate[1]-1;
+			deps3Locate=preLocate[2]-1;
 
       $deps1.eq(deps1Locate).addClass('on');
-      $deps1.eq(deps1Locate).find($deps2).eq(deps2Locate).addClass('on');
+			$deps1.eq(deps1Locate).find($deps2).eq(deps2Locate).addClass('on');
+			$deps1.eq(deps1Locate).find($deps2).find($deps3).eq(deps3Locate).addClass('on');
 			$snb.eq(deps2Locate).addClass('on');
+			$snb1.eq(deps3Locate).addClass('on');
 
-			$snb.each(function(index,item){
-				getAttr=$(this).children('a').attr('href');
-				index+=1;
-				$snb=$(this).children('a').attr('href',"#?index="+deps1Locate+',' + index);
-			});
+			$snb.each(function(idx, obj){
+				var obj = $(obj);
+				idx += 1;
+				getAttr=obj.children('a').attr('href');				
+				$snb=obj.children('a').attr('href', getAttr + "?index="+preLocate[0]+',' + idx + ',1');
+				if(obj.find('.snb1').length) snb1(idx);			
+			})
 
+
+
+			function snb1(idx){
+				var getSnb = $('.snb_list > li').eq(idx).find('.snb');
+				var getLi =getSnb.find('li');
+				console.log(getSnb);
+				console.log(getLi);
+			
+				// getLi.each(function(idx2, obj){
+				// 	var obj = $(obj);
+				// 	getAttr=obj.children('a').attr('href');
+				// 	idx2 += 1;
+				// 	obj.children('a').attr('href', getAttr + "?index="+preLocate[0]+',' + idx +','+ idx2);
+				// });
+			}
 		}
 	};
 
@@ -51,36 +84,33 @@ $(function(){
 				onItem.addClass('on');
 			}
 		}
-
-  }
-  function menu2Open(onSubItem){
+  };
+  function menu2Open(onItem){
 		$deps1.removeClass('on');
 		$deps2.removeClass('on');
-		onSubItem.addClass('on').parents('li').addClass('on');
-
-		$deps1.each(function(i){
-			if($deps1.eq(i).attr('class') == "on"){
-					// $deps1.eq(i).slideDown();
-			}else{
-				// $deps1.eq(i).find('ul').slideUp();
-			}
-		});
+		onItem.addClass('on').parents('li').addClass('on');
+	}
+	function menu3Open(onItem){
+		$deps1.removeClass('on');
+		$deps2.removeClass('on');
+		$deps3.removeClass('on');
+		onItem.addClass('on').parents('li').addClass('on');
   }
 
   $deps1.children('a').on('click',function(){menu1Open($(this))});
   $deps2.on('click',function(){menu2Open($(this))});
+  $deps3.on('click',function(){menu3Open($(this))});
 
 });
 
 function init(){
 	/* layer_popup */
 	var modal= $( "[dataformat='modal']" );
-	  modal.draggable({ handle: ".pop_tit h1" });
+	  modal.draggable({ handle: ".pop_header h1" });
 	  modal.find("[role='btn_close']").on('click',function(e){
-		    e.preventDefault();
-		    $(this).parents('.pop_wrap').hide();
-		    $(this).parents('.overlay').hide();
-		  });
+			e.preventDefault();
+			$(this).parents('.overlay').hide();
+		});
 
 		/* fileDeco */
 		function fileNameInput(){
@@ -104,7 +134,7 @@ function init(){
 	  $( ".datepicker" ).on('click',function(){
 	    $(this).next('img').click();
 	  });
-	  $( "[dataformat='datepicker']" ).datepicker({
+	  $( "[dataformat='datepic']" ).datepicker({
 	      buttonText: "날짜를 선택해주세요."
 	    });
 	  $( "[dataformat='from']" ).datepicker({
@@ -127,23 +157,22 @@ function init(){
 			var thisp=$(this).parents('.quick');
 			thisp.toggleClass('quick_open');
 			thisp.children('.quick_body').slideToggle();
-		})
-
-		jqgridInit();
+		});
 		btnToggle();
+		tabInit();
 }
 
 function jqgridInit(){
-	$('.jq-grid').each(function(){
-		var grids=$(this);
-		$(this).setGridWidth($(this).parents('.article_body').width() - 2);
-	}
-);
-
+	$('.jq-grid').each(function(idx, obj){
+		var obj=$(obj), pw=0;
+    pw = obj.parents('[jq-grid-wrap]').width() - 2;
+		obj.jqGrid('setGridWidth', pw);
+	});
 }
 $(window).on('resize', function() {
 	jqgridInit();
 });
+
 
 function btnToggle(e){
 	$('.btn_toggle').on('click',function(e){
@@ -164,4 +193,20 @@ function contBodyToggle(className){
 	contBody.toggleClass(className);
 	(contBody.hasClass(className)) ? btn.prop('title','열기').text('열기') :  btn.attr('title','닫기').text('닫기');
 	jqgridInit();
+}
+
+function tabInit(){
+	var tabCont = $('.tab_contents');
+	tabCont.hide();
+	$('.tab li').first().addClass('on');
+	tabCont.first().show();
+
+	$('.tab a').on('click',function(e){
+		e.preventDefault();
+		var getId = $(this).attr('tabIndex');
+		$('.tab li').removeClass('on');
+		tabCont.hide();
+		$(this).parent('li').addClass('on');
+		$('#'+getId).show();
+	})
 }

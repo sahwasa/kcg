@@ -68,7 +68,7 @@
 *{margin:0;padding:0;}
 body,h1,h2,h3,h4,h5,h6,th,td,input,select,textarea,ul,li,dl,dt,dd,button,p,a{color:#333;font-family:"Malgun Gothic","맑은고딕","notokr-r","AppleSDGothic","Nanum Barun Gothic","NanumGothic","AppleGothic","Dotum","Arial",sans-serif;font-size:13px;font-weight:normal;word-spacing:.5px;letter-spacing:-.5px;}
 /* .axi{font-family:Malgun Gothic\0;} */
-.axi::before{font-family:'axicon'\0;}
+.axi::before{font-family:'axicon';}
 body,html{width:100%;height:100%;text-align:center;-webkit-text-size-adjust:none;background:#fff;}
 div{display:inline-block;box-sizing:border-box;width:100%;}
 h1,h2,h3,h4,h5,h6{display:inline-block;box-sizing:border-box;width:auto;}
