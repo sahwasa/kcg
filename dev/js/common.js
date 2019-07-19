@@ -109,7 +109,7 @@ function init(){
 		$.datepicker.setDefaults({
 			buttonImageOnly: true,
 			showOn: "both",
-			buttonImage: "../../img/btn_calendar.gif",
+			buttonImage: "/resources/img/btn_calendar.gif",
 			defaultDate: "+1w",
 			changeMonth: true,
 	    changeYear: true,
