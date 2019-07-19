@@ -47,7 +47,7 @@ function watch(){
   gulp.watch('dev/**/*.html', inc);
   gulp.watch('dev/**/*.css', minifyCSS);
   gulp.watch('dev/img/**/*.*', imgMin),
-  gulp.watch('dev/**/*.js', uglifyJS),
+  gulp.watch('dev/js/**/*.js', uglifyJS),
   gulp.watch('dist/**/*.html').on('chagne', browserSync.reload);
 }
 
