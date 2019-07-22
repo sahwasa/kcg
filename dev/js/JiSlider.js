@@ -134,7 +134,7 @@
 
 		// selecting li tags with two clones
 		li = this.find('ul li');
-		var img = this.find('ul li img');
+		var img = this.find('ul li > img');
 
 		li.css({
 			width: (100 / (slides + 2)) + '%',
@@ -178,7 +178,7 @@
 			});
 			
 			var buttons = new Array();
-			for (var i = 0; i < slides; i++) {
+			for (var i = 0; i < slides; i+=1) {
 				buttons[i] = $('<div>', {'class': 'jislider__button', 'data-index': (i + 1)}).css({
 					border: '1px solid ' + setting.color,
 				}).click(function () {
