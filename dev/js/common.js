@@ -109,7 +109,8 @@ function init(){
 		$.datepicker.setDefaults({
 			buttonImageOnly: true,
 			showOn: "both",
-			buttonImage: "/resources/img/btn_calendar.gif",
+			buttonImage: "../../img/btn_calendar.gif",
+			// buttonImage: "/resources/img/btn_calendar.gif",
 			defaultDate: "+1w",
 			changeMonth: true,
 	    changeYear: true,
@@ -141,9 +142,22 @@ function init(){
 		
 		$('[quicktoggle]').on('click',function(e){
 			e.preventDefault();
-			var thisp=$(this).parents('.quick');
-			thisp.toggleClass('quick_open');
-			thisp.children('.quick_body').slideToggle();
+			var thisp=$(this).parents('.quick'),
+					openClass = 'quick_open',
+					aniTime = 200,
+					cont = $('.content');
+			if(thisp.hasClass(openClass)){
+				thisp.removeClass(openClass);
+				thisp.animate({right:'0'}, aniTime);
+				cont.animate({'padding-right':'180px'}, aniTime);
+			}else{
+				thisp.addClass(openClass);
+				thisp.animate({right:'-140px'}, aniTime);
+				cont.animate({'padding-right':'24px'}, aniTime);
+			}
+			setTimeout(function(){
+				jqgridInit();
+			}, aniTime);
 		});
 		btnToggle();
 		tabInit();

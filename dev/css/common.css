@@ -169,14 +169,14 @@ input, textarea {border:1px solid #a9a9a9;color:#333;vertical-align:middle;backg
 .t_blue{color:#4f9fcf;}
 
 .overlay,
-.item_overlay{position:fixed;left:0;top:0;height:100%;background:rgba(0,0,0,.5);z-index:400;}
+.item_overlay{position:fixed;left:0;top:0;height:100%;background:rgba(0,0,0,.3);z-index:400;}
 .item_overlay{position:absolute;}
 
 /* input [ radio | checkbox ] */
 label{vertical-align:middle;}
 .required::after{content:" *";color:#f35857;font-size:11px;font-weight:600;}
 input,
-select{padding:1px 5px;border:solid 1px #CCC\0;box-sizing:border-box;}
+select{padding:1px 5px;border:solid 1px #a9a9a9\9;box-sizing:border-box;}
 input[type="text"],
 input[type="password"]{height:28px;}
 input[type="radio"],
