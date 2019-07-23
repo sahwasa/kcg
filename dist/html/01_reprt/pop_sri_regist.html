@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>사이버견문보고관리시스템:해양경찰청</title>
+  <link rel="icon" href="../../img/kcg_logo.png" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="../../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../plugins/jquery-ui/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../plugins/jqGrid/ui.jqgrid.css" />
+  <link rel="stylesheet" type="text/css" href="../../plugins/jquery-ui/themes/custom/jquery-ui.theme.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/pop.css" />
+
+  <script src="../../plugins/jquery-1.11.0.min.js" charset="utf-8"></script>
+  <script src="../../plugins/jquery-ui/jquery-ui.min.js" charset="utf-8"></script>
+  <script src="../../plugins/jqGrid/jquery.jqGrid.min.js" type="text/javascript"></script>
+  <script src="../../plugins/jqGrid/i18n/grid.locale-kr.js" type="text/javascript"></script>
+  <script src="../../plugins/jquery-ui/ui/i18n/datepicker-ko.js" type="text/javascript"></script>
+  <script src="../../js/common.js" charset="utf-8"></script>
+</head>
+<body>
+<div id="wrap">
+  <div class="overlay">
+    <div class="pop_wrap pop_sri_regist" dataformat="modal">
+      <div class="pop_header">
+        <h1>SRI 등록</h1>
+        <span><a href="#" class="btn_close axi axi-close" role="btn_close">닫기</a></span>
+      </div>
+      <div class="pop_body">
+        <dl class="dl_form_use_grid dl_devide_9">
+          <dt class="w_2">소속</dt>
+          <dd class="w_3">경찰청</dd>
+          <dt>작성자</dt>
+          <dd>홍길동</dd>
+          <dt>작성일</dt>
+          <dd>2018-09-11</dd>
+          <dt class="required w_2"><label for="">분야</label></dt>
+          <dd class="w_3 select_wrap">
+            <select name="" id=""><option value="">전체</option></select>
+            <select name="" id=""><option value="">전체</option></select>
+          </dd>
+          <dt>구분</dt>
+          <dd class="w_3">
+            <input type="radio" id="" name="divide"><label for="">전체</label>
+            <input type="radio" id="" name="divide"><label for="">정보</label>
+            <input type="radio" id="" name="divide"><label for="">일반</label>
+          </dd>
+          <dt class="required w_2"><label for="">수집기간</label></dt>
+          <dd class="w_7">
+            <span class="search_period">
+              <input type="text" id="" placeholder="YYYY/MM /DD" readonly class="date" dataformat="from" required /> ~
+              <input type="text" id="" placeholder="YYYY/MM /DD" readonly class="date" dataformat="to" required />
+            </span> 
+          </dd>
+          <dt class="required w_2"><label for="">수신기관</label></dt>
+          <dd class="w_7">
+            <ul class="list_area">
+              <li><input type="checkbox"><label for="">본청</label></li>
+              <li><input type="checkbox"><label for="">중부지방청</label></li>
+              <li><input type="checkbox"><label for="">서해지방청</label></li>
+              <li><input type="checkbox"><label for="">동해지방청</label></li>
+              <li><input type="checkbox"><label for="">남해지방청</label></li>
+              <li><input type="checkbox"><label for="">서해5도경비단</label></li>
+              <li><input type="checkbox"><label for="">인천</label></li>
+              <li><input type="checkbox"><label for="">보령</label></li>
+              <li><input type="checkbox"><label for="">목포</label></li>
+              <li><input type="checkbox"><label for="">군산</label></li>
+              <li><input type="checkbox"><label for="">완도</label></li>
+            </ul>
+          </dd>
+          <dt class="required w_2"><label for="">제목</label></dt>
+          <dd class="w_7">
+            <input type="text" />
+          </dd>
+          <dt class="w_2">내용</dt>
+          <dd class="w_7">
+            <textarea class="full" name="" id="" cols="30" rows="20"></textarea>
+          </dd>
+        </dl>
+      </div>
+      <div class="pop_footer">
+        <a href="" class="btn btn_blue">저장</a>
+        <a href="" class="btn btn_red">삭제</a>
+        <a href="" class="btn btn_gray" role="btn_close">닫기</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+  <ul class="foot_link">
+    <li><a href="">이용안내</a></li>
+    <li><a href="">사이트맵</a></li>
+    <li><a href="">매뉴얼 다운로드</a></li>
+    <li><a href="">보안정보시스템</a></li>
+    <li><a href="">신암경찰견문시스템</a></li>
+  </ul>
+  <div class="f_info">
+    <h1>해양경찰로고</h1>
+    <p class="addr">
+        21995 인천광역시 연수구 해돋이로 130 (송도동 3-8) 대표전화 : 032-835-2000
+    </p>
+    <p class="copyright">COPYRIGHT©2019 Korea Coast Guard. All rights reserved</p>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+  init();
+})
+;(function(){
+  $('.jq-grid').each(function(idx, obj){
+    var obj=$(obj),pw=0;
+    pw = obj.parents('[jq-grid-wrap]').width() - 2;
+    setTimeout(function(){
+      obj.jqGrid('setGridWidth', pw)
+    }, 1);
+  }); 
+})(jQuery);
+</script>
+</div>
+</body>
+</html>

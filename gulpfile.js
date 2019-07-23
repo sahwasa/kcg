@@ -17,13 +17,13 @@ function inc(){
 }
 function minifyCSS(){
   return gulp.src('dev/css/**/*.css')
-  .pipe(minifycss())
+  // .pipe(minifycss())
   .pipe(gulp.dest('dist/css'))
   .pipe(browserSync.stream());
 }
 function uglifyJS(){
   return gulp.src('dev/js/**/*.js')
-  .pipe(uglifyjs())
+  // .pipe(uglifyjs())
   .pipe(gulp.dest('dist/js'))
   .pipe(browserSync.stream());
 }
@@ -33,11 +33,6 @@ function imgMin(){
   .pipe(gulp.dest('dist/img'))
   .pipe(browserSync.stream());
 }
-function incClean(){
-  return gulp.src('dist/inc')
-  .pipe(clean())
-}
-
 function watch(){
   browserSync.init({
     server: {

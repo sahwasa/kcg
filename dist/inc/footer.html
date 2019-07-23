@@ -1,0 +1,31 @@
+<div class="footer">
+  <ul class="foot_link">
+    <li><a href="">이용안내</a></li>
+    <li><a href="">사이트맵</a></li>
+    <li><a href="">매뉴얼 다운로드</a></li>
+    <li><a href="">보안정보시스템</a></li>
+    <li><a href="">신암경찰견문시스템</a></li>
+  </ul>
+  <div class="f_info">
+    <h1>해양경찰로고</h1>
+    <p class="addr">
+        21995 인천광역시 연수구 해돋이로 130 (송도동 3-8) 대표전화 : 032-835-2000
+    </p>
+    <p class="copyright">COPYRIGHT©2019 Korea Coast Guard. All rights reserved</p>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+  init();
+})
+;(function(){
+  $('.jq-grid').each(function(idx, obj){
+    var obj=$(obj),pw=0;
+    pw = obj.parents('[jq-grid-wrap]').width() - 2;
+    setTimeout(function(){
+      obj.jqGrid('setGridWidth', pw)
+    }, 1);
+  }); 
+})(jQuery);
+</script>
