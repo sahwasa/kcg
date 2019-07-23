@@ -148,8 +148,8 @@ a[quicktoggle]::before{content:"\f1b1";font-family:'axicon';font-size:12px;}
 .dot_list li{position:relative;padding-left:13px;line-height:24px;overflow:hidden;}
 .dot_list li::before{position:absolute;left:3px;top:13px;content:"";width:2px;height:2px;background-color:#ff4b4b;}
 .dot_list li span{float:right;}
-.banner_list{overflow:hidden;}
-.banner_list li{float:left;width:calc(100% / 7);padding:10px 0 13px;}
+.banner_list{display:inline-block;width:100%;overflow:hidden;}
+.banner_list li{float:left;width:14.2%;height:71px;padding:10px 0 13px;}
 
 /* content */
 .content{padding:0 24px;}
