@@ -8,12 +8,12 @@
     <!-- content -->
     <div class="content">
       <div class="cont_tit">
-        <h1>SRI관리<span>견문관리</span></h1>
+        <h1>견문검색<span>견문관리</span></h1>
         <div class="locate">
           <ul>
             <li><a href="#"><i class="axi axi-ion-home" title="home"></i></a></li>
             <li><a href="#">견문관리</a></li>
-            <li>SRI관리</li>
+            <li>견문검색</li>
           </ul>
         </div>
       </div>
@@ -21,100 +21,117 @@
         <div class="article">
             <div class="article_body">
               <div class="search">
-                <label for="">구분</label>
-                <select name="" id="">
-                  <option value="">전체</option>
-                  <option value=""></option>
-                </select>
-                <label for="">소속</label>
-                <select name="" id="">
-                  <option value="">전체</option>
-                  <option value=""></option>
-                </select>
-                <label for="">부서</label>
-                <select name="" id="">
-                  <option value="">전체</option>
-                  <option value=""></option>
-                </select>
+                <dl class="dl_form_use_grid dl_devide_9">
+                  <dt><label for="">구분</label></dt>
+                  <dd class="w_2">
+                    <select name="" id="">
+                      <option value="">전체</option>
+                    </select>
+                  </dd>
+                  <dt><label for="">소속</label></dt>
+                  <dd class="w_2">
+                    <select name="" id="">
+                      <option value="">전체</option>
+                    </select>
+                  </dd>
+                  <dt><label for="">부서</label></dt>
+                  <dd class="w_2">
+                    <select name="" id="">
+                      <option value="">전체</option>
+                    </select>
+                  </dd>
+                </dl>                
                 <div class="dtl_search">
-                  <span class="search_period">
-                    <label for="">기간</label>
-                    <input type="text" id="" placeholder="YYYY/MM /DD" readonly class="date" dataformat="from" required /> ~
-                    <input type="text" id="" placeholder="YYYY/MM /DD" readonly class="date" dataformat="to" required />
-                  </span>
-                  <span class="search_radio">                    <label for=""><input type="radio">전체</label>
-                    <label for=""><input type="radio">상보</label>
-                  </span>
-                  <label for="">평가</label>
-                  <select name="" id="">
-                    <option value="">전체</option>
-                  </select>
-                  <label for="">분야</label>
-                  <select name="" id="">
-                    <option value="">전문분야</option>
-                  </select>
-                  <select name="" id="">
-                    <option value="">수집목표</option>
-                  </select>
-                  <label for="">성명</label>
-                  <input type="text" />
-                  <label for="">제목</label>
-                  <input type="text" />
-                  <label for="">키워드</label>
-                  <input type="text" />
-                  <label for="">내용</label>
-                  <input type="text" />
-                  <label for="">첨부파일명</label>
-                  <input type="text" />
+                  <dl class="dl_form_use_grid dl_devide_9">
+                    <dt><label for="">기간</label></dt>
+                    <dd class="search_period w_5">
+                      <input type="text" id="" placeholder="YYYY/MM /DD" readonly class="date" dataformat="from" required /> ~
+                      <input type="text" id="" placeholder="YYYY/MM /DD" readonly class="date" dataformat="to" required />
+                    </dd>
+                    <dt><span class="label">상보</span></dt>
+                    <dd class="search_radio w_2"><label for=""><input type="radio">전체</label>
+                      <label for=""><input type="radio">상보</label></dd>
+                    <dt><label for="">평가</label></dt>
+                    <dd>
+                      <select name="" id="">
+                        <option value="">전체</option>
+                      </select>
+                    </dd>
+                    <dt><label for="">분야</label></dt>
+                    <dd class="w_3 select_wrap">                      
+                      <select name="" id="">
+                        <option value="">전문분야</option>
+                      </select>
+                      <select name="" id="">
+                          <option value="">수집목표</option>
+                      </select>
+                    </dd>
+                    <dt><label for="">성명</label></dt>
+                    <dd class="w_2"><input type="text" /></dd>
+                    <dt><label for="">제목</label></dt>
+                    <dd class="w_4"><input type="text" /></dd>
+                    <dt><label for="">키워드</label></dt>
+                    <dd class="w_3"><input type="text" /></dd>
+                    <dt><label for="">내용</label></dt>
+                    <dd class="w_4"><input type="text" /></dd>
+                    <dt><label for="">첨부파일명</label></dt>
+                    <dd class="w_3"><input type="text" /></dd>
+                  </dl>
                 </div>               
-                <a href="#" class="btn btn_skyblue">검색</a>
-                <span class="fr">
-                    <a href="" class="btn btn_red">등록</a>
-                    <a href="" class="btn btn_blue">내려받기</a>
-                </span>
+                <div class="search_btn_wrap">
+                  <a href="" class="search_dtl_btn" toggleSearch>상세검색 펼치기</a>
+                  <a href="#" class="btn btn_skyblue">검색</a>
+                  <span class="fr">
+                      <a href="" class="btn btn_red">등록</a>
+                      <a href="" class="btn btn_blue">내려받기</a>
+                  </span>
+                </div>
               </div>
               <div class="arti_section" jq-grid-wrap>
-                <table id="jqGrid" class="jq-grid"></table>
-                <div id="pager1"></div>
-                <script type="text/javascript">
-                  var mydata = [
-                    {"org":"본청","name":"관리자","spe":"해양과학(민생여론)","division":"정보/일반","tit":"제목","from":"2018-09-24","to":"2018-09-30","regist":"2018-10-11 10:20:15","reprt":"제목"}
-                  ];
-                  $(document).ready(function () {
-                      var grid = $("#jqGrid");
-                      grid.jqGrid({
-                          data: mydata,
-                          datatype: "local",
-                          editurl: 'clientArray',
-                          colModel: [
-                            {label:'소속', name: 'org', align:"center", width:50},
-                            {label:'성명', name: 'name',align:"center", width:60},
-                            {label:'전문분야(수집목표)', name: 'spe',align:"center", width:100},
-                            {label:'구분', name:'division',align:"center", width:80},
-                            {label:'제목', name:'tit',align:"center"},
-                            {label:'기간(From)', name:'from', align:"center", width:80},
-                            {label:'기간(To)', name: 'to',align:"center", width:80},
-                            {label:'등록일시', name: 'regist',align:"center", width:120},
-                            {label:'견문보기', name: 'reprt',  width:80,align:"center",formatter:mk_btn}
-                          ],
-                          height: 400,
-                          rownumbers: true, // show row numberOfMonths
-                          rownumWidth: 25,
-                          rowTotal: -1,
-                          pager: '#pager1',
-                          jsonReader : {repeatitems : false}
-                      });
+                  <table id="jqGrid2" class="jq-grid"></table>
+                  <div id="pager2"></div>
+                  <script type="text/javascript">
+                    var mydata2 = [
+                      {"doc":"본청-11","division":"정보","date":"2018-09-14","org":"본청","part":"정보과","name":"관리자","tit":"제목","eval":"판단","dtls":"상보","spe":"해양과학(민생여론)","attach":"첨부"}
+                    ];
+                    $(document).ready(function () {
+                        var grid2 = $("#jqGrid2");
+                        grid2.jqGrid({
+                            data: mydata2,
+                            datatype: "local",
+                            editurl: 'clientArray',
+                            colModel: [
+                              {label:'문서번호', name: 'doc', align:"center", width:50},
+                              {label:'구분', name: 'division',align:"center", width:50},
+                              {label:'보고일시', name: 'date',align:"center", width:80},
+                              {label:'소속', name:'org',align:"center", width:60},
+                              {label:'부서', name: 'part',align:"center", width:50},
+                              {label:'성명', name: 'name', align:"center", width:50},
+                              {label:'제목', name: 'tit',align:"center"},
+                              {label:'평가', name: 'eval',align:"center", width:50},
+                              {label:'상보', name: 'dtls',align:"center", width:50},
+                              {label:'전문분야(수집목표)', name: 'spe',align:"center", width:100},
+                              {label:'첨부파일', name:'attach', align:"center", width:90, formatter:mk_btn}
+                            ],
+                            height: 400,
+                            rownumbers: true,
+                            rownumWidth: 25,
+                            rowTotal: -1,
+                            pager: '#pager2',
+                            jsonReader : {repeatitems : false}
+                        });
 
-                      function mk_btn(cellValue, options, rowdata, action){
-                        var html;
-                        var cellValue = cellValue + "";
-                          html = "<a class='btn btn_white' href='#;' onclick='hello();return false;' title='견문보기'>견문보기</a>";
-                        return html;
-                      }
-                  });
+                        function mk_btn(cellValue, options, rowdata, action){
+                          var html;
+                          var cellValue = cellValue + "";
+                            html = "<a class='ico_only btn_excel' href='#;' onclick='' title='첨부파일'>첨부파일</a> <a class='ico_only btn_hwp' href='#;' onclick='' title='첨부파일'>첨부파일</a> <a class='ico_only btn_word' href='#;' onclick='' title='첨부파일'>첨부파일</a> <a class='ico_only btn_pdf' href='#;' onclick='' title='첨부파일'>첨부파일</a> <a class='ico_only btn_img' href='#;' onclick='' title='첨부파일'>첨부파일</a>";
+                          return html;
+                        }
+                    });
                 </script>
               </div>
             </div>
+          </div>
         </div>           
       </div>
     </div>
