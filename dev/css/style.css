@@ -318,7 +318,7 @@ td .axi{margin-right:0;}
 
 /* list */
 .list_area{display:inline-block;width:100%;background-color:#f8f9fa;padding:1% 0 1% 1.5%;overflow:hidden;border-radius:.25rem;}
-.list_area li{float:left;width:20%;margin:0;padding:0;letter-spacing:-1px;}
+.list_area li{float:left;width:25%;margin:0;padding:0;letter-spacing:-1px;}
 /* .list_area li:first-child{margin-left:-20%;} */
 .list_area input[type="checkbox"]{width:auto;height:auto;}
 .list_area label{display:inline-block;margin-bottom:0;}
