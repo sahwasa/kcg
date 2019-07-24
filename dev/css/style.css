@@ -2,11 +2,11 @@
 
 /* layout */
 #wrap{display:block;min-width:1280px;height:100%;}
-#header{display:block;height:108px;background-color:#fff;letter-spacing:-1px;}
-#snb{position:absolute;left:0;top:0;bottom:0;width:234px;}
-#cont{display:block;display:inline-block\0;position:relative;min-height:calc(100% - 196px);overflow:hidden;}
-.content{float:right;width:calc(100% - 231px);min-height:100%;text-align:left;}
-.main.content{display:block;width:100%;padding:0;}
+#header{position:fixed;left:0;top:0;display:block;height:108px;background-color:rgba(255,255,255,.8);letter-spacing:-1px;z-index:150;}
+#snb{position:absolute;left:0;top:0;bottom:0;width:234px;margin-top:108px;}
+#cont{display:block;display:inline-block\0;position:relative;min-height:calc(100% - 98px);overflow:hidden;}
+.content{float:right;width:calc(100% - 231px);min-height:100%;text-align:left;margin-top:110px;}
+.main.content{display:block;width:100%;padding:0;margin-top:0;}
 
 /* accessibility */
 #accessibility{position:relative;display:block;z-index:999;}
@@ -184,9 +184,10 @@ a[quicktoggle]::before{content:"\f1b1";font-family:'axicon';font-size:12px;}
 .search .btn{padding:3px 8px 2px;padding:2px 8px 3px\0;margin-bottom:10px;}
 .search .ui-datepicker-trigger{bottom:5px;}
 .search label,
-.search  .label{display:inline-block;margin-left:10px;font-weight:600;color:#666;}
+.search .label{display:inline-block;margin-left:10px;font-weight:600;color:#666;}
 .search label::before,
 .search .label::before{content:"·";color:#d84a38;margin-right:5px;}
+.search .search_radio label::before{display:none;}
 .search input[type="text"],
 .search select{min-width:80px;}
 .search .input_name{width:80px;}
@@ -196,14 +197,14 @@ a[quicktoggle]::before{content:"\f1b1";font-family:'axicon';font-size:12px;}
 .search_period select{min-width:136px;}
 .search_period #p_year{min-width:137px;}
 .date{width:125px!important;}
-.scail{width:30px;min-width:auto;}
+/* .scail{width:30px;min-width:auto;}
 .search .btn_wrap{float:right;margin-top:0!important;}
 .search .btn_wrap .btn{font-size:12px!important;}
 .li_radio_wrap{display:inline-block;overflow:hidden;vertical-align:middle;}
 .li_radio_wrap li{float:left;}
 .li_radio_wrap label{margin-left:0;padding-left:0;}
 .li_radio_wrap label::before{content:"";margin:0;}
-.li_radio_wrap input{margin:0 0 7px 10px;}
+.li_radio_wrap input{margin:0 0 7px 10px;} */
 
 /* table */
 .ui-jqgrid .tbl_sub{border-color:#d7dfe3;background-color:#98a1bd;}

@@ -17,7 +17,7 @@ function inc(){
 }
 function minifyCSS(){
   return gulp.src('dev/css/**/*.css')
-  // .pipe(minifycss())
+  .pipe(minifycss())
   .pipe(gulp.dest('dist/css'))
   .pipe(browserSync.stream());
 }
