@@ -111,7 +111,6 @@ function init(){
 			showOn: "both",
 			buttonImage: "../../img/btn_calendar.gif",
 			// buttonImage: "/resources/img/btn_calendar.gif",
-			defaultDate: "+1w",
 			changeMonth: true,
 	    changeYear: true,
 			numberOfMonths: 1
@@ -160,6 +159,7 @@ function init(){
 			}, aniTime);
 		});
 		btnToggle();
+		toggleSearch();
 		tabInit();
 		zoom();
 }
@@ -175,6 +175,15 @@ $(window).on('resize', function() {
 	jqgridInit();
 });
 
+function toggleSearch(e){
+	$('[toggleSearch]').on('click',function(e){
+		e.preventDefault();
+		var foldDtl = $('.dtl_search'),  btn = $(this),
+				status = btn.hasClass('fold');
+		(status) ? btn.text('상세검색 펼치기') : btn.text('상세검색 접기'); btn.toggleClass('fold');
+		foldDtl.slideToggle('fast');
+	})
+}
 
 function btnToggle(e){
 	$('.btn_toggle').on('click',function(e){

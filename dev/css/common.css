@@ -66,7 +66,7 @@
   }
 /* Reset */
 *{margin:0;padding:0;}
-body,h1,h2,h3,h4,h5,h6,th,td,input,select,textarea,ul,li,dl,dt,dd,button,p,a{color:#333;font-family:"Malgun Gothic","맑은고딕","notokr-r","AppleSDGothic","Nanum Barun Gothic","NanumGothic","AppleGothic","Dotum","Arial",sans-serif;font-size:13px;font-weight:normal;word-spacing:.5px;letter-spacing:-.5px;}
+body,h1,h2,h3,h4,h5,h6,th,td,input,select,textarea,ul,li,dl,dt,dd,button,p,a{color:#333;font-family:"Malgun Gothic","맑은고딕","notokr-r","AppleSDGothic","Nanum Barun Gothic","NanumGothic","AppleGothic","Dotum","Arial",sans-serif;font-size:14px;font-weight:normal;word-spacing:.5px;letter-spacing:-.5px;}
 /* .axi{font-family:Malgun Gothic\0;} */
 .axi::before{font-family:'axicon';}
 body,html{width:100%;height:100%;text-align:center;-webkit-text-size-adjust:none;background:#fff;}
@@ -176,7 +176,7 @@ input, textarea {border:1px solid #a9a9a9;color:#333;vertical-align:middle;backg
 label{vertical-align:middle;}
 .required::after{content:" *";color:#f35857;font-size:11px;font-weight:600;}
 input,
-select{padding:1px 5px;border:solid 1px #a9a9a9\9;box-sizing:border-box;}
+select{padding:1px 5px;box-sizing:border-box;}
 input[type="text"],
 input[type="password"]{height:28px;}
 input[type="radio"],
@@ -184,7 +184,7 @@ input[type="checkbox"]{border:none;margin-right:5px;}
 select{vertical-align:bottom\9;padding-right:0;height:28px;}
 select::-ms-expand{background:none;border:none;color:#606060;}
 option:hover{background:#e3f4fb;}
-textarea{resize:none;padding:5px;box-sizing:border-box;border:solid 1px #ccc\9;}
+textarea{resize:none;padding:5px;box-sizing:border-box;}
 .radio{margin-right:4px;margin-right: 1px\9; /* ie */}
 .checkbox{margin: 0 4px 3px 0;margin:0 1px 0 0\9;}
 .to,
@@ -195,71 +195,6 @@ textarea{resize:none;padding:5px;box-sizing:border-box;border:solid 1px #ccc\9;}
 .radio_wrap label{margin-right:5px;}
 
 .info{float:right;margin-top:5px;color:#999;font-size:11px;}
-
-/* ico_fileName Extention */
-.ico_ext{display:inline-block;width:17px;height:17px;background:url(../img/ico_fileExt.png) -223px -82px no-repeat;margin:0 7px;vertical-align:middle;font-size:0;line-height:0;}
-.ext_bmp{background-position:-3px -2px;}
-.ext_jpg{background-position:-23px -2px;}
-.ext_gif{background-position:-43px -2px;}
-.ext_png{background-position:-63px -2px;}
-.ext_tif{background-position:-83px -2px;}
-.ext_pdf{background-position:-103px -2px;}
-.ext_ppt{background-position:-123px -2px;}
-.ext_ai {background-position:-143px -2px;}
-.ext_xls{background-position:-163px -2px;}
-.ext_psd{background-position:-183px -2px;}
-.ext_doc{background-position:-3px -22px;}
-.ext_hwp{background-position:-23px -22px;}
-.ext_txt{background-position:-43px -22px;}
-.ext_c  {background-position:-63px -22px;}
-.ext_cpp{background-position:-83px -22px;}
-.ext_jav{background-position:-103px -22px;}
-.ext_htm{background-position:-123px -22px;}
-.ext_css{background-position:-143px -22px;}
-.ext_js {background-position:-163px -22px;}
-.ext_log{background-position:-183px -22px;}
-.ext_m4a{background-position:-203px -22px;}
-.ext_swf{background-position:-223px -22px;}
-.ext_au {background-position:-3px -42px;}
-.ext_mid{background-position:-23px -42px;}
-.ext_mod{background-position:-43px -42px;}
-.ext_mp2{background-position:-63px -42px;}
-.ext_mp3{background-position:-83px -42px;}
-.ext_ogg{background-position:-103px -42px;}
-.ext_ra {background-position:-123px -42px;}
-.ext_rm {background-position:-143px -42px;}
-.ext_snd{background-position:-163px -42px;}
-.ext_voc{background-position:-183px -42px;}
-.ext_wav{background-position:-203px -42px;}
-.ext_wma{background-position:-223px -42px;}
-.ext_avi{background-position:-3px -62px;}
-.ext_mov{background-position:-23px -62px;}
-.ext_mpg{background-position:-43px -62px;}
-.ext_mv {background-position:-63px -62px;}
-.ext_asf{background-position:-83px -62px;}
-.ext_asx{background-position:-103px -62px;}
-.ext_qt {background-position:-123px -62px;}
-.ext_rv {background-position:-143px -62px;}
-.ext_wmx{background-position:-163px -62px;}
-.ext_mp4{background-position:-183px -62px;}
-.ext_fla{background-position:-203px -62px;}
-.ext_flv{background-position:-223px -62px;}
-.ext_alz{background-position:-3px -82px;}
-.ext_arj{background-position:-23px -82px;}
-.ext_bzz{background-position:-43px -82px;}
-.ext_egg{background-position:-63px -82px;}
-.ext_gz {background-position:-83px -82px;}
-.ext_jar{background-position:-103px -82px;}
-.ext_rar{background-position:-123px -82px;}
-.ext_tar{background-position:-143px -82px;}
-.ext_tgz{background-position:-163px -82px;}
-.ext_zip{background-position:-183px -82px;}
-.ext_7z {background-position:-203px -82px;}
-.ext_etc{background-position:-223px -82px;}
-.ext_html{background-position:-3px -102px;}
-.ext_wmv {background-position:-23px -102px;}
-.ext_wvz {background-position:-43px -102px;}
-.ext_bzs {background-position:-63px -102px;}
 
 /*jquery-ui-fix*/
 .ui-datepicker{z-index:900!important;}
