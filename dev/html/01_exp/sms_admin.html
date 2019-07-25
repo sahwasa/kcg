@@ -35,8 +35,68 @@
 
             <div id="tab02" class="tab_contents">
               <div class="article">
-                <div class="article_body">
-                  
+                <div class="article_body sms_admin">
+                  <div class="section">
+                    <dl class="fl dl_form_use_grid dl_devide_6 ipt_sms">
+                      <dt><label for="">예약발송</label></dt>
+                      <dd class="w_5">
+                        <p>
+                          <label for="">
+                            <input type="checkbox" id="" />
+                            예약발송 설정 시 우선 체크 후 발송예정 일시설정
+                          </label> 
+                        </p>
+                        <p class="search_period">
+                          <input type="text" id="" placeholder="YYYY-MM-DD" readonly class="date" dataformat="datepic" required />
+                          <span class="ipt_time">
+                            <select name="" id="">
+                              <option value="">1</option>
+                            </select> 시
+                            <select name="" id="">
+                              <option value="">59</option>
+                            </select> 분
+                           </span>
+                        </p>                        
+                      </dd>
+                      <dt>존칭선택</dt>
+                      <dd class="w_5">
+                        <label for="">
+                          <input type="checkbox" id="" />
+                          체크 시 성명 뒤에 '님'포함
+                        </label> 
+                      </dd>
+                      <dt><label for="">발신번호</label></dt>
+                      <dd class="w_5"><input type="text" maxlength="12" /> 숫자만 입력(최대 12자)</dd>
+                      <dt class="w_6"><label for="">수신자 선택 (최대100명)</label></dt>
+                      <dd class="w_6 receiver">
+                          <p class="sel_all">
+                            <label for=""><input type="checkbox">전체선택 / 해제</label>
+                            <a href="" class="btn btn_skyblue divide">개별검색</a>
+                          </p>
+                          <ul class="list_receivers" select_user>
+                            <li><label for="s1"><input type="checkbox" id="s1">경사 홍길동</label></li>
+                            <li><label for="s2"><input type="checkbox" id="s2">경사 홍길동</label></li>
+                            <li><label for="s3"><input type="checkbox" id="s3">경사 홍길동</label></li>
+                            <li><label for="s4"><input type="checkbox" id="s4">경사 홍길동</label></li>
+                            <li><label for="s5"><input type="checkbox" id="s5">경사 홍길동</label></li>
+                            <li><label for="s6"><input type="checkbox" id="s6">경사 홍길동</label></li>
+                            <li><label for="s7"><input type="checkbox" id="s7">경사 홍길동</label></li>
+                            <li><label for="s8"><input type="checkbox" id="s8">경사 홍길동</label></li>
+                            <li><label for="s9"><input type="checkbox" id="s9">경사 홍길동</label></li>
+                          </ul>
+                      </dd>
+                    </dl>
+                    <div class="msg_wrap fr">
+                      <div class="msg">
+                        <label for="">메시지 내용</label>
+                        <textarea name="" id="" cols="30" rows="20"></textarea>
+                        <span>0 / 85 Bytes</span>
+                      </div>
+                      <div class="btn_wrap">
+                        <a href="" class="btn btn_red btn_send">발송</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

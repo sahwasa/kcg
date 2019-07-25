@@ -162,6 +162,7 @@ function init(){
 		toggleSearch();
 		tabInit();
 		zoom();
+		selectUser();
 }
 
 function jqgridInit(){
@@ -220,6 +221,17 @@ function tabInit(){
 		$(this).parent('li').addClass('on');
 		$('#'+getId).show();
 		jqgridInit();
+	})
+}
+
+function selectUser(){
+	$('[select_user] :checkbox').on('change',function(){
+		var itm = $(this);
+		if(itm.prop('checked')){
+			itm.parent('label').addClass('check');
+		}else{
+			itm.parent('label').removeClass('check');
+		}
 	})
 }
 
