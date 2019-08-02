@@ -217,152 +217,214 @@
     </div>
     <div class="snb_wrap">
       <div class="snb_tit bass">
-        <h1>견문관리</h1>
+        <h1>집단민원관리</h1>
       </div>
       <ul class="snb_list">
-        <li><a href="">견문검색</a></li>
-        <li><a href="">견문작성</a></li>
-        <li><a href="">개인실적관리</a>
-          <ul class="snb1">
-            <li><a href="">전체보고서</a></li>
-            <li><a href="">임시저장보고서</a></li>
-            <li><a href="">반려보고서</a></li>
-            <li><a href="">평가진행보고서</a></li>
-            <li><a href="">평가완료보고서</a></li>
-          </ul>
-        </li>
-        <li><a href="">개인실적통계</a>
-          <ul class="snb1">
-            <il><a href="">년월별 실적집계</a></il>
-            <il><a href="">년월별 실적추이</a></il>
-          </ul>
-        </li>
-        <li><a href="">함정장 견문검색</a></li>
-        <li><a href="">견문평가</a>
-          <ul class="snb1">
-            <li><a href="">견문평가(당월)</a></li>
-            <li><a href="">견문평가(당월미평가)</a></li>
-            <li><a href="">견문평가(전월미평가)</a></li>
-          </ul>
-        </li>
-        <li><a href="">견문통계</a></li>
-        <li><a href="">상보견문통계</a></li>
-        <li><a href="">SRI관리</a></li>
-        <li><a href="">SMS발송관리</a></li>
+        <li><a href="">집단민원검색</a></li>
+        <li><a href="">집단민원작성</a></li>
+        <li><a href="">집단행동검색</a></li>
+        <li><a href="">집단행동작성</a></li>
+        <li><a href="">집단민원집계</a></li>
+        <li><a href="">집단행동집계</a></li>
+        <li><a href="">채증자료검색</a></li>
+        <li><a href="">채증자료작성</a></li>
+        <li><a href="">채증요원명단</a></li>
       </ul>
     </div>      
   </div>
   <!-- snb__e -->
     <!-- content -->
-    <div id="content" class="content">
+    <div class="content">
       <div class="cont_tit">
-        <h1>SMS발송관리<span>견문관리</span></h1>
+        <h1>집단행동작성<span>집단민원관리</span></h1>
         <div class="locate">
           <ul>
             <li><a href="#"><i class="axi axi-ion-home" title="home"></i></a></li>
-            <li><a href="#">견문관리</a></li>
-            <li>SMS발송관리</li>
+            <li><a href="#">집단민원관리</a></li>
+            <li>집단행동작성</li>
           </ul>
         </div>
       </div>
-      <div class="cont_body">
-        <div class="tab_wrap">
-            <ul class="tab">
-              <!-- <li><a href="#" tabIndex="tab01">SMS발송(그룹)</a></li> -->
-              <li><a href="#" tabIndex="tab02">SMS발송(개별)</a></li>
-              <li><a href="#" tabIndex="tab03">SMS발송현황</a></li>
-            </ul>
-            
-            <!-- <div id="tab01" class="tab_contents">
-              <div class="article">
-                <div class="article_body">
-                  
-                </div>
-              </div>
-            </div> -->
-
-            <div id="tab02" class="tab_contents">
-              <div class="article">
-                <div class="article_body sms_admin">
-                  <div class="section">
-                    <dl class="fl dl_form_use_grid dl_devide_6 ipt_sms">
-                      <dt><label for="">예약발송</label></dt>
-                      <dd class="w_5">
-                        <p>
-                          <label for="">
-                            <input type="checkbox" id="" />
-                            예약발송 설정 시 우선 체크 후 발송예정 일시설정
-                          </label> 
-                        </p>
-                        <p class="search_period">
-                          <input type="text" id="" placeholder="YYYY-MM-DD" readonly class="date" dataformat="datepic" required />
-                          <span class="ipt_time">
-                            <select name="" id="">
-                              <option value="">1</option>
-                            </select> 시
-                            <select name="" id="">
-                              <option value="">59</option>
-                            </select> 분
-                           </span>
-                        </p>                        
-                      </dd>
-                      <dt>존칭선택</dt>
-                      <dd class="w_5">
+      <div class="cont_body">            
+        <div class="article">
+          <div class="article_body">
+            <div class="tbl_top">
+              <span class="fr">
+                <a href="" class="btn btn_blue">저장</a>
+              </span>
+            </div>
+            <div class="report">
+              <table class="tbl_default">
+                <caption>집단행동작성</caption>
+                <colgroup>
+                  <col width="150" span="10">
+                </colgroup>
+                <tr>
+                  <th scope="row">소속</th>
+                  <td></td>
+                  <th scope="row">계급</th>
+                  <td></td>
+                  <th scope="row">작성자</th>
+                  <td></td>
+                  <th scope="row">작성일</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required"><label for="">유형</label></th>
+                  <td>
+                    <select name="" id="" class="full"><option value="">선택</option></select>
+                  </td>
+                  <th scope="row" class="required"><label for="">장소</label></th>
+                  <td>
+                    <select name="" id="" class="full"><option value="">선택</option></select>
+                  </td>
+                  <th scope="row" class="required"><label for="">원인</label></th>
+                  <td>
+                    <select name="" id="" class="full"><option value="">선택</option></select>
+                  </td>
+                  <th scope="row" class="required"><label for="">분야</label></th>
+                  <td>
+                    <select name="" id="" class="full"><option value="">선택</option></select>
+                  </td>                  
+                </tr>
+                <tr>
+                  <th scope="row" class="required">제목</th>
+                  <td colspan="7"><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">주최</th>
+                  <td colspan="7"><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">대상기관</th>
+                  <td colspan="7"><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">대표</th>
+                  <td colspan="3"><input type="text" class="full" /></td>
+                  <th scope="row" class="required">인원</th>
+                  <td colspan="3"><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">세력</th>
+                  <td colspan="3"><input type="text" class="full" /></td>
+                  <th scope="row" class="required">유관기관</th>
+                  <td colspan="3"><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required"><label for="">기간</label></th>
+                  <td colspan="7" class="alignL">
+                    <input type="text" id="" placeholder="YYYY-MM-DD" readonly class="date" dataformat="from" required />
+                    ~
+                    <input type="text" id="" placeholder="YYYY-MM-DD" readonly class="date" dataformat="to" required />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">집회장소</th>
+                  <td colspan="7"><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">요구사항</th>
+                  <td colspan="7"><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">참가인원</th>
+                  <td colspan="3"><input type="text" /> 집계용() 숫자만 입력</td>
+                  <th scope="row" class="required">동원선박</th>
+                  <td colspan="3"><input type="text" /> 집계용() 숫자만 입력</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">형태</th>
+                  <td colspan="7">
+                    <ul class="list_act">
+                      <li>
                         <label for="">
-                          <input type="checkbox" id="" />
-                          체크 시 성명 뒤에 '님'포함
-                        </label> 
-                      </dd>
-                      <dt class="required"><label for="">발신번호</label></dt>
-                      <dd class="w_5"><input type="text" maxlength="12" /> 숫자만 입력(최대 12자)</dd>
-                      <dt class="w_6 required"><label for="">수신자 선택 (최대100명)</label></dt>
-                      <dd class="w_6 receiver">
-                          <p class="sel_all">
-                            <label for=""><input type="checkbox">전체선택 / 해제</label>
-                            <a href="" class="btn btn_skyblue divide">개별검색</a>
-                          </p>
-                          <ul class="list_receivers" select_user>
-                            <li><label for="s1"><input type="checkbox" id="s1">경사 홍길동</label></li>
-                            <li><label for="s2"><input type="checkbox" id="s2">경사 홍길동</label></li>
-                            <li><label for="s3"><input type="checkbox" id="s3">경사 홍길동</label></li>
-                            <li><label for="s4"><input type="checkbox" id="s4">경사 홍길동</label></li>
-                            <li><label for="s5"><input type="checkbox" id="s5">경사 홍길동</label></li>
-                            <li><label for="s6"><input type="checkbox" id="s6">경사 홍길동</label></li>
-                            <li><label for="s7"><input type="checkbox" id="s7">경사 홍길동</label></li>
-                            <li><label for="s8"><input type="checkbox" id="s8">경사 홍길동</label></li>
-                            <li><label for="s9"><input type="checkbox" id="s9">경사 홍길동</label></li>
-                          </ul>
-                      </dd>
-                    </dl>
-                    <div class="msg_wrap fr">
-                      <div class="msg">
-                        <label for="">메시지 내용</label>
-                        <textarea name="" id="" cols="30" rows="20"></textarea>
-                        <span>0 / 85 Bytes</span>
-                      </div>
-                      <div class="btn_wrap">
-                        <a href="" class="btn btn_red btn_send">발송</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                          <input type="checkbox" name="" id="">공사방해
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">교통방해
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">항로차단
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">단속방해
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">가두행진
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">연좌농성
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">구호제창
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">업무방해
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">면담
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">기타
+                        </label>
+                      </li>                      
+                    </ul>
+                  </td>
+                </tr>                
+                <tr>
+                  <th scope="row">준비물</th>
+                  <td colspan="7">
+                    <textarea name="" id="" cols="30" rows="5" class="full"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">동향</th>
+                  <td colspan="7">
+                    <textarea name="" id="" cols="30" rows="5" class="full"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">조치</th>
+                  <td colspan="7">
+                    <textarea name="" id="" cols="30" rows="5" class="full"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required"><label for="">결과</label></th>
+                  <td colspan="3"><input type="text" class="full" /></td>
+                  <th scope="row" class="required"><label for="">구속인원</label></th>
+                  <td><input type="text"  class="full"/></td>
+                  <th scope="row" class="required"><label for="">불구속인원</label></th>
+                  <td><input type="text" class="full" /></td>                  
+                </tr>               
+              </table>
             </div>
-
-            <div id="tab03" class="tab_contents">
-              <div class="article">
-                <div class="article_body">
-                  
-                </div>
-              </div>
-            </div>
-
           </div>
-        </div>
+        </div>           
       </div>
-      <!-- content__e -->
     </div>
-    <div class="footer">
+    <!-- content__e -->
+  </div>
+  <div class="footer">
   <ul class="foot_link">
     <li><a href="">이용안내</a></li>
     <li><a href="">사이트맵</a></li>

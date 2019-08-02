@@ -1,0 +1,202 @@
+@@include('../../inc/top.html')
+<body>
+<div id="wrap">
+  @@include('../../inc/header.html')
+  @@include('../../inc/quick_menu.html')
+  <div id="cont">
+    @@include('../../inc/snb_02_complain.html')
+    <!-- content -->
+    <div class="content">
+      <div class="cont_tit">
+        <h1>집단행동작성<span>집단민원관리</span></h1>
+        <div class="locate">
+          <ul>
+            <li><a href="#"><i class="axi axi-ion-home" title="home"></i></a></li>
+            <li><a href="#">집단민원관리</a></li>
+            <li>집단행동작성</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cont_body">            
+        <div class="article">
+          <div class="article_body">
+            <div class="tbl_top">
+              <span class="fr">
+                <a href="" class="btn btn_blue">저장</a>
+              </span>
+            </div>
+            <div class="report">
+              <table class="tbl_default">
+                <caption>집단행동작성</caption>
+                <colgroup>
+                  <col width="150" span="10">
+                </colgroup>
+                <tr>
+                  <th scope="row">소속</th>
+                  <td></td>
+                  <th scope="row">계급</th>
+                  <td></td>
+                  <th scope="row">작성자</th>
+                  <td></td>
+                  <th scope="row">작성일</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required"><label for="">유형</label></th>
+                  <td>
+                    <select name="" id="" class="full"><option value="">선택</option></select>
+                  </td>
+                  <th scope="row" class="required"><label for="">장소</label></th>
+                  <td>
+                    <select name="" id="" class="full"><option value="">선택</option></select>
+                  </td>
+                  <th scope="row" class="required"><label for="">원인</label></th>
+                  <td>
+                    <select name="" id="" class="full"><option value="">선택</option></select>
+                  </td>
+                  <th scope="row" class="required"><label for="">분야</label></th>
+                  <td>
+                    <select name="" id="" class="full"><option value="">선택</option></select>
+                  </td>                  
+                </tr>
+                <tr>
+                  <th scope="row" class="required">제목</th>
+                  <td colspan="7"><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">주최</th>
+                  <td colspan="7"><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">대상기관</th>
+                  <td colspan="7"><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">대표</th>
+                  <td colspan="3"><input type="text" class="full" /></td>
+                  <th scope="row" class="required">인원</th>
+                  <td colspan="3"><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">세력</th>
+                  <td colspan="3"><input type="text" class="full" /></td>
+                  <th scope="row" class="required">유관기관</th>
+                  <td colspan="3"><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required"><label for="">기간</label></th>
+                  <td colspan="7" class="alignL">
+                    <input type="text" id="" placeholder="YYYY-MM-DD" readonly class="date" dataformat="from" required />
+                    ~
+                    <input type="text" id="" placeholder="YYYY-MM-DD" readonly class="date" dataformat="to" required />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">집회장소</th>
+                  <td colspan="7"><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">요구사항</th>
+                  <td colspan="7"><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">참가인원</th>
+                  <td colspan="3"><input type="text" /> 집계용() 숫자만 입력</td>
+                  <th scope="row" class="required">동원선박</th>
+                  <td colspan="3"><input type="text" /> 집계용() 숫자만 입력</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">형태</th>
+                  <td colspan="7">
+                    <ul class="list_act">
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">공사방해
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">교통방해
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">항로차단
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">단속방해
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">가두행진
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">연좌농성
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">구호제창
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">업무방해
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">면담
+                        </label>
+                      </li>
+                      <li>
+                        <label for="">
+                          <input type="checkbox" name="" id="">기타
+                        </label>
+                      </li>                      
+                    </ul>
+                  </td>
+                </tr>                
+                <tr>
+                  <th scope="row">준비물</th>
+                  <td colspan="7">
+                    <textarea name="" id="" cols="30" rows="5" class="full"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">동향</th>
+                  <td colspan="7">
+                    <textarea name="" id="" cols="30" rows="5" class="full"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">조치</th>
+                  <td colspan="7">
+                    <textarea name="" id="" cols="30" rows="5" class="full"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required"><label for="">결과</label></th>
+                  <td colspan="3"><input type="text" class="full" /></td>
+                  <th scope="row" class="required"><label for="">구속인원</label></th>
+                  <td><input type="text"  class="full"/></td>
+                  <th scope="row" class="required"><label for="">불구속인원</label></th>
+                  <td><input type="text" class="full" /></td>                  
+                </tr>               
+              </table>
+            </div>
+          </div>
+        </div>           
+      </div>
+    </div>
+    <!-- content__e -->
+  </div>
+  @@include('../../inc/footer.html')
+  </div>
+</body>
+</html>

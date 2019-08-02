@@ -100,10 +100,10 @@ function init(){
 		});
 
 		/* fileDeco */
-		function fileNameInput(){
-			var fName=$('#file').val().split('\\');
-			$('#file_name').val($(fName)[2]);
-		}
+		$('[role="fileAdd"]').change(function(){
+			var fileAdd = $(this);
+			fileAdd.parent('span').prev('[role="filePath"]').val(fileAdd.val());
+		});
 
 	  /*calendar*/
 		$.datepicker.setDefaults({

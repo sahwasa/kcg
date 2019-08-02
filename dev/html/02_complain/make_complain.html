@@ -1,0 +1,127 @@
+@@include('../../inc/top.html')
+<body>
+<div id="wrap">
+  @@include('../../inc/header.html')
+  @@include('../../inc/quick_menu.html')
+  <div id="cont">
+    @@include('../../inc/snb_02_complain.html')
+    <!-- content -->
+    <div class="content">
+      <div class="cont_tit">
+        <h1>집단민원작성<span>집단민원관리</span></h1>
+        <div class="locate">
+          <ul>
+            <li><a href="#"><i class="axi axi-ion-home" title="home"></i></a></li>
+            <li><a href="#">집단민원관리</a></li>
+            <li>집단민원작성</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cont_body">            
+        <div class="article">
+          <div class="article_body">
+            <div class="tbl_top">
+              <span class="fr">
+                <a href="" class="btn btn_blue">저장</a>
+              </span>
+            </div>
+            <div class="report">
+              <table class="tbl_exp_report">
+                <colgroup>
+                  <col width="150" span="10">
+                </colgroup>
+                <tr>
+                  <th scope="row">고유번호</th>
+                  <td></td>
+                  <th scope="row">작성자</th>
+                  <td></td>
+                  <th scope="row">작성일</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required"><label for="">구분</label></th>
+                  <td><select name="" id="" class="full"><option value="">선택</option></select></td>
+                  <th scope="row" class="required"><label for="">민원유형</label></th>
+                  <td></td>
+                  <th scope="row"><label for="">해소년월일</label></th>
+                  <td class="alignL"><input type="text" id="" placeholder="YYYY-MM-DD" readonly class="date" dataformat="datepic" required /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">민원명</th>
+                  <td colspan="5"><input type="text" /></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="required">결성일자</th>
+                  <td><input type="text" /></td>
+                  <th scope="row" class="required">대상</th>
+                  <td colspan="3"><input type="text" /></td>
+                </tr>
+                <tr>
+                  <th scope="row">사무실</th>
+                  <td colspan="5">-</td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2">대표</th>
+                  <th scope="col">성명</th>
+                  <th scope="col">연령</th>
+                  <th scope="col" colspan="3">직책, 출신, 최종학교, 성향 등</th>
+                </tr>
+                <tr>
+                  <td>홍길동</td>
+                  <td>33</td>
+                  <td colspan="3">경사</td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="3">공동대표</th>
+                  <td>홍길동</td>
+                  <td>33</td>
+                  <td colspan="3">경사</td>
+                </tr>
+                <tr>
+                  <td>홍길동</td>
+                  <td>33</td>
+                  <td colspan="3">경사</td>
+                </tr>
+                <tr>
+                  <td>홍길동</td>
+                  <td>33</td>
+                  <td colspan="3">경사</td>
+                </tr>
+                <tr>
+                  <th scope="row">참가인원 / 자산규모</th>
+                  <td></td>
+                  <th scope="row">참가척 수 / 인원 수</th>
+                  <td></td>
+                  <th scope="row">발생 / 해소</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">유관기관 담당자</th>
+                  <td></td>
+                  <th scope="row">담당자</th>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <th scope="row">민원개요 요구사항</th>
+                  <td colspan="5">
+                    <textarea name="" id="" cols="30" rows="5" class="full"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">주요 진행사항</th>
+                  <td colspan="5">
+                    <textarea name="" id="" cols="30" rows="5" class="full"></textarea>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>           
+      </div>
+    </div>
+    <!-- content__e -->
+  </div>
+  @@include('../../inc/footer.html')
+  </div>
+</body>
+</html>

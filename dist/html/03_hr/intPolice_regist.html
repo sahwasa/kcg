@@ -256,113 +256,277 @@
     <!-- content -->
     <div id="content" class="content">
       <div class="cont_tit">
-        <h1>SMS발송관리<span>견문관리</span></h1>
+        <h1>정보경찰등록<span>HR관리</span></h1>
         <div class="locate">
           <ul>
             <li><a href="#"><i class="axi axi-ion-home" title="home"></i></a></li>
-            <li><a href="#">견문관리</a></li>
-            <li>SMS발송관리</li>
+            <li><a href="#">HR관리</a></li>
+            <li>정보경찰등록</li>
           </ul>
         </div>
       </div>
-      <div class="cont_body">
-        <div class="tab_wrap">
-            <ul class="tab">
-              <!-- <li><a href="#" tabIndex="tab01">SMS발송(그룹)</a></li> -->
-              <li><a href="#" tabIndex="tab02">SMS발송(개별)</a></li>
-              <li><a href="#" tabIndex="tab03">SMS발송현황</a></li>
-            </ul>
-            
-            <!-- <div id="tab01" class="tab_contents">
-              <div class="article">
-                <div class="article_body">
-                  
-                </div>
-              </div>
-            </div> -->
-
-            <div id="tab02" class="tab_contents">
-              <div class="article">
-                <div class="article_body sms_admin">
-                  <div class="section">
-                    <dl class="fl dl_form_use_grid dl_devide_6 ipt_sms">
-                      <dt><label for="">예약발송</label></dt>
-                      <dd class="w_5">
-                        <p>
-                          <label for="">
-                            <input type="checkbox" id="" />
-                            예약발송 설정 시 우선 체크 후 발송예정 일시설정
-                          </label> 
-                        </p>
-                        <p class="search_period">
-                          <input type="text" id="" placeholder="YYYY-MM-DD" readonly class="date" dataformat="datepic" required />
-                          <span class="ipt_time">
-                            <select name="" id="">
-                              <option value="">1</option>
-                            </select> 시
-                            <select name="" id="">
-                              <option value="">59</option>
-                            </select> 분
-                           </span>
-                        </p>                        
-                      </dd>
-                      <dt>존칭선택</dt>
-                      <dd class="w_5">
-                        <label for="">
-                          <input type="checkbox" id="" />
-                          체크 시 성명 뒤에 '님'포함
-                        </label> 
-                      </dd>
-                      <dt class="required"><label for="">발신번호</label></dt>
-                      <dd class="w_5"><input type="text" maxlength="12" /> 숫자만 입력(최대 12자)</dd>
-                      <dt class="w_6 required"><label for="">수신자 선택 (최대100명)</label></dt>
-                      <dd class="w_6 receiver">
-                          <p class="sel_all">
-                            <label for=""><input type="checkbox">전체선택 / 해제</label>
-                            <a href="" class="btn btn_skyblue divide">개별검색</a>
-                          </p>
-                          <ul class="list_receivers" select_user>
-                            <li><label for="s1"><input type="checkbox" id="s1">경사 홍길동</label></li>
-                            <li><label for="s2"><input type="checkbox" id="s2">경사 홍길동</label></li>
-                            <li><label for="s3"><input type="checkbox" id="s3">경사 홍길동</label></li>
-                            <li><label for="s4"><input type="checkbox" id="s4">경사 홍길동</label></li>
-                            <li><label for="s5"><input type="checkbox" id="s5">경사 홍길동</label></li>
-                            <li><label for="s6"><input type="checkbox" id="s6">경사 홍길동</label></li>
-                            <li><label for="s7"><input type="checkbox" id="s7">경사 홍길동</label></li>
-                            <li><label for="s8"><input type="checkbox" id="s8">경사 홍길동</label></li>
-                            <li><label for="s9"><input type="checkbox" id="s9">경사 홍길동</label></li>
-                          </ul>
-                      </dd>
-                    </dl>
-                    <div class="msg_wrap fr">
-                      <div class="msg">
-                        <label for="">메시지 내용</label>
-                        <textarea name="" id="" cols="30" rows="20"></textarea>
-                        <span>0 / 85 Bytes</span>
-                      </div>
-                      <div class="btn_wrap">
-                        <a href="" class="btn btn_red btn_send">발송</a>
-                      </div>
+      <div class="cont_body">           
+        <div class="article">
+          <div class="article_body">
+            <div class="tbl_top">
+              <span class="fr">
+                <a href="" class="btn btn_blue">저장</a>
+              </span>
+            </div>
+            <div class="report">
+              <table class="tbl_default">
+                <caption>기초정보</caption>
+                <colgroup>
+                  <col width="30">
+                  <col width="150">
+                  <col width="80">
+                  <col width="150">
+                  <col width="80">
+                  <col width="150">
+                </colgroup>
+                <tr>
+                  <td colspan="2" rowspan="6" class="alignC">
+                    <img src="http://placehold.it/180x200" width="auto" height="100%" alt="사진">
+                    <div class="file_attach mgTop06">
+                      <input type="text" id="" name="" class="file_text" readonly role="filePath" title="사진첨부 경로" />
+                      <span class="file_wrap btn btn_skyblue">
+                        찾기
+                        <input type="file" role="fileAdd" class="file_add"/>
+                      </span>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  </td>
+                  <th scope="row"><label for="">성명</label></th>
+                  <td><input type="text" /></td>
+                  <th scope="row"><label for="">생년월일</label></th>
+                  <td>
+                    <input type="text" id="" placeholder="YYYY-MM-DD" readonly class="date" dataformat="datepic" required />                   
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="">계급</label></th>
+                  <td>
+                    <select name="" id="">
+                      <option value="">선택</option>
+                    </select>
+                  </td>
+                  <th scope="row"><label for="">직위</label></th>
+                  <td>
+                    <select name="" id="">
+                      <option value="">선택</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="">소속</label></th>
+                  <td>
+                    <select name="" id="">
+                      <option value="">선택</option>
+                    </select>
+                  </td>
+                  <th scope="row"><label for="">부서</label></th>
+                  <td>
+                    <select name="" id="">
+                      <option value="">선택</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="">아이디</label></th>
+                  <td><input type="text" size="10" /> <a href="" class="btn btn_skyblue">중복</a></td>
+                  <th scope="row"><label for="">비밀번호</label></th>
+                  <td><input type="password" /></td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="">성별</label></th>
+                  <td>
+                    <span class="radio_wrap">
+                      <label for=""><input type="radio" name="" id="">남</label>
+                      <label for=""><input type="radio" name="" id="">여</label>
+                    </span>
+                  </td>                  
+                  <th scope="row"><label for="">이메일</label></th>
+                  <td><input type="text" /></td>
+                </tr>
+                <tr>                  
+                  <th scope="row"><label for="">재직여부</label></th>
+                  <td>
+                    <select name="" id="">
+                      <option value="">선택</option>
+                    </select>
+                  </td>
+                  <th scope="row"><label for="">권한등급</label></th>
+                  <td>
+                    <select name="" id="">
+                      <option value="">선택</option>
+                    </select>
+                  </td>                  
+                </tr>
+                <tr>
+                  <th scope="row"><label for="">서명</label></th>
+                  <td>                    
+                    <div class="file_attach">
+                      <input type="text" id="" name="" class="file_text" readonly role="filePath" title="서명파일 경로" />
+                      <span class="file_wrap btn btn_skyblue">
+                        찾기
+                        <input type="file" role="fileAdd" class="file_add"/>
+                      </span>
+                    </div>
+                  </td>
+                  <th scope="row"><label for="">직별</label></th>
+                  <td>
+                    <select name="" id="">
+                      <option value="">선택</option>
+                    </select>
+                  </td>
+                  <th scope="row"><label for="">근무형태</label></th>
+                  <td>
+                    <select name="" id="">
+                      <option value="">선택</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>
+              <table class="tbl_default mgTop06">
+                <caption>상세정보</caption>
+                <colgroup>
+                  <col width="25%" span="4" />
+                </colgroup>
+                <tr>
+                  <th scope="row"><label for="">휴대폰번호</label></th>
+                  <td><input type="text" /></td>
+                  <th scope="row"><label for="">사무실번호</label></th>
+                  <td><input type="text" /></td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="">경찰임용일</label></th>
+                  <td><input type="text" id="" placeholder="YYYY-MM-DD" readonly class="date" dataformat="datepic" required /></td>
+                  <th scope="row"><label for="">현계급임용일</label></th>
+                  <td><input type="text" id="" placeholder="YYYY-MM-DD" readonly class="date" dataformat="datepic" required /></td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="">현부서배치일</label></th>
+                  <td><input type="text" id="" placeholder="YYYY-MM-DD" readonly class="date" dataformat="datepic" required /></td>
+                  <th scope="row"><label for="">정보부서 근무경력</label></th>
+                  <td>
+                    <input type="text" size="6" /> 년
+                    <input type="text" size="6" /> 개월
+                  </td>
+                </tr>
+              </table>
+              <table class="tbl_default tbl_alignC mgTop06">
+                <caption>경력상세</caption>
+                <tr>
+                  <th width="100" scope="row" rowspan="2">승진임용일
+                    <a href="" class="btn btn_skyblue">추가</a>
+                  </th>
+                  <th scope="col">계급</th>
+                  <th scope="col">임용일자</th>
+                  <th scope="col">임용과정</th>
+                  <th scope="col">비고</th>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2">승진임용일
+                    <a href="" class="btn btn_skyblue">추가</a>
+                  </th>
+                  <th scope="col">계급</th>
+                  <th scope="col">임용일자</th>
+                  <th scope="col">임용과정</th>
+                  <th scope="col">비고</th>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2">주요경력
+                    <a href="" class="btn btn_skyblue">추가</a>
+                  </th>
+                  <th scope="col">계급</th>
+                  <th scope="col">임용일자</th>
+                  <th scope="col">임용과정</th>
+                  <th scope="col">비고</th>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2">정보경찰력
+                    <a href="" class="btn btn_skyblue">추가</a>
+                  </th>
+                  <th scope="col">계급</th>
+                  <th scope="col">임용일자</th>
+                  <th scope="col">임용과정</th>
+                  <th scope="col">비고</th>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2">채증요원경력
+                    <a href="" class="btn btn_skyblue">추가</a>
+                  </th>
+                  <th scope="col">계급</th>
+                  <th scope="col">임용일자</th>
+                  <th scope="col">임용과정</th>
+                  <th scope="col">비고</th>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2">교육이수내역
+                    <a href="" class="btn btn_skyblue">추가</a>
+                  </th>
+                  <th scope="col">계급</th>
+                  <th scope="col">임용일자</th>
+                  <th scope="col">임용과정</th>
+                  <th scope="col">비고</th>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row">평가분야</th>
+                  <td colspan="6">
+                    <ul class="list_act">
+                      <li><label for=""><input type="checkbox" name="" id=""> 해양과학</label></li>
+                      <li><label for=""><input type="checkbox" name="" id=""> 어업·수산</label></li>
+                      <li><label for=""><input type="checkbox" name="" id=""> 해운·항만</label></li>
+                      <li><label for=""><input type="checkbox" name="" id=""> 국제·안보</label></li>
+                      <li><label for=""><input type="checkbox" name="" id=""> 내부정보</label></li>
+                    </ul>
+                  </td>
+                </tr>   
+              </table>
 
-            <div id="tab03" class="tab_contents">
-              <div class="article">
-                <div class="article_body">
-                  
-                </div>
-              </div>
             </div>
-
           </div>
         </div>
       </div>
-      <!-- content__e -->
     </div>
-    <div class="footer">
+    <!-- content__e -->
+  </div>
+  <div class="footer">
   <ul class="foot_link">
     <li><a href="">이용안내</a></li>
     <li><a href="">사이트맵</a></li>
@@ -393,6 +557,6 @@ $(function(){
   }); 
 })(jQuery);
 </script>
-  </div>
+</div>
 </body>
 </html>

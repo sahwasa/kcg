@@ -199,7 +199,7 @@ label input{margin-top:-3px;}
 
 /*jquery-ui-fix*/
 .ui-datepicker{z-index:900!important;}
-.ui-datepicker-title{display:block;width:auto;}
+.ui-datepicker-title{display:block;width:auto;margin: 0 2em;}
 .ui-datepicker-title select{min-width:auto;height:auto;}
 .ui-datepicker select.ui-datepicker-month,
 .ui-datepicker select.ui-datepicker-year{width:40%;margin:0 1px 3px;padding:0;}
