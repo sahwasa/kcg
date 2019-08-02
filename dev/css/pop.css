@@ -7,7 +7,7 @@
 .pop_wrap .pop_header .btn_close{width:50px;height:39px;text-align:center;margin:0;}
 .pop_wrap .pop_header .btn_close{float:right;color:#fff;font-size:0;line-height:37px;}
 .pop_wrap .pop_header .btn_close::before{font-size:22px;vertical-align:middle;}
-.pop_wrap >.pop_body{padding:10px;overflow-y:auto;}
+.pop_wrap >.pop_body{padding:10px;overflow-y:auto;max-height:690px;}
 .pop_wrap > .pop_footer{padding:0 0 10px;text-align: center;}
 .pop_wrap .btn_wrap{margin-top:20px;text-align:center;}
 .pop_wrap .tab_btn{top:0;}
