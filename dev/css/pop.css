@@ -7,7 +7,7 @@
 .pop_wrap .pop_header .btn_close{width:50px;height:39px;text-align:center;margin:0;}
 .pop_wrap .pop_header .btn_close{float:right;color:#fff;font-size:0;line-height:37px;}
 .pop_wrap .pop_header .btn_close::before{font-size:22px;vertical-align:middle;}
-.pop_wrap >.pop_body{padding:10px;overflow-y:auto;}
+.pop_wrap >.pop_body{padding:10px;overflow-y:scroll;}
 .pop_wrap > .pop_footer{padding:0 0 10px;text-align: center;}
 .pop_wrap .btn_wrap{margin-top:20px;text-align:center;}
 .pop_wrap .tab_btn{top:0;}
@@ -25,6 +25,6 @@
 .pop_wrap textarea{background-color:#f1f3f4;}
 .pop_wrap .pop_article .btn_wrap .btn{min-width:64px;height:23px;line-height:21px;font-size:11px;}
 
-.pop_sri_regist{width:700px;top:80px;margin-left:-450px;}
+.pop_sri_regist{width:900px;top:80px;margin-left:-450px;}
 .pop_sri_regist .w_2{width:calc(100% / 9 * 1.5)}
 .pop_sri_regist .w_7{width:calc(100% / 9 * 7.5)}
