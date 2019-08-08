@@ -90,6 +90,27 @@ $(function(){
 });
 
 function init(){
+	var lnb = $('.lnb_list'),
+			sub1 = $('.sub1'),
+			lnbOverlay = $('.lnb_overlay'),
+			timer,
+			delay = 500;
+	sub1.hide();
+	lnb.on({
+		'mouseenter': function(){
+			timer = setTimeout(function() {
+				sub1.stop();
+				sub1.slideDown(delay);
+				lnbOverlay.show();
+			}, delay)
+		},
+		'mouseleave': function(){
+			clearTimeout(timer);
+			sub1.stop();
+			sub1.slideUp(delay);
+			lnbOverlay.hide();
+		}
+	})
 	
 	/* layer_popup */
 	var modal= $( "[dataformat='modal']" );
