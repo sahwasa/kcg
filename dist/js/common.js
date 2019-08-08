@@ -89,15 +89,17 @@ $(function(){
 
 });
 
-function init(){
+function init(){	
 	var lnb = $('.lnb_list'),
 			sub1 = $('.sub1'),
 			lnbOverlay = $('.lnb_overlay'),
 			timer,
-			delay = 500;
+			delay = 500,
+			lnb_switch = $('#lnb_switch');
 	sub1.hide();
 	lnb.on({
 		'mouseenter': function(){
+			if(!lnb_switch.prop('checked')) return false;
 			timer = setTimeout(function() {
 				sub1.stop();
 				sub1.slideDown(delay);
