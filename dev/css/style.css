@@ -2,7 +2,7 @@
 
 /* layout */
 #wrap{display:block;min-width:1280px;height:100%;}
-#header{position:fixed;left:0;top:0;min-width:1280px;display:block;height:108px;background-color:rgba(255,255,255,.8);letter-spacing:-1px;z-index:150;}
+#header{position:absolute;left:0;top:0;min-width:1280px;display:block;height:72px;background-color:rgba(255,255,255,.8);letter-spacing:-1px;z-index:150;}
 #snb{position:absolute;left:0;top:0;bottom:0;width:234px;margin-top:108px;}
 #cont{display:block;display:inline-block\0;position:relative;min-height:calc(100% - 99px);overflow:hidden;}
 .content{float:right;width:calc(100% - 231px);min-height:100%;text-align:left;margin-top:110px;}
