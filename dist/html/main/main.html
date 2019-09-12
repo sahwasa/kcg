@@ -182,44 +182,37 @@
 </div>
   <div id="cont">
     <!-- content -->
-    <div class="content main">
-      <div id="JiSlider" class="jislider">
-        <ul>
-          <li class="bg_fix">
-            <img src="../../img/bg1.jpg">
-            <div class="copy">
-                <img src="../../img/bg_copy01.png" alt="소중한 정보 하나가 조직과 국가의 큰힘이 됩니다.">
-            </div>
-          </li>
-          <li>
-            <img src="../../img/bg2.jpg">
-            <div class="copy">
-              <img src="../../img/bg_copy02.png" alt="소통과 공감을 통해 국민과 함께 미래를 여는 정보">           
-            </div>
-          </li>
-          <li>
-            <img src="../../img/bg3.jpg">
-            <div class="copy">
-              <img src="../../img/bg_copy03.png" alt="대한민국이 안심할 수 있도록 든든한 해양정보">
-            </div>
-          </li>
-        </ul>
+    <div class="content main">      
+      <ul class="slider">
+        <li><img src="../../img/bg1.jpg" alt="배경1"/>
+        <div class="copy">
+          <img src="../../img/bg_copy01.png" alt="소중한 정보 하나가 조직과 국가의 큰힘이 됩니다.">
         </div>
-        <script src="../../js/JiSlider.js"></script>
-        <script>
-          $(window).load(function () {
-            $('#JiSlider').JiSlider({color: '#fff', start: 1, reverse: false}).addClass('ff')
-          })
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-36251023-1']);
-          _gaq.push(['_setDomainName', 'jqueryscript.net']);
-          _gaq.push(['_trackPageview']);        
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-        </script>
+        </li>
+        <li><img src="../../img/bg2.jpg" alt="배경2"/>
+          <div class="copy">
+            <img src="../../img/bg_copy02.png" alt="소통과 공감을 통해 국민과 함께 미래를 여는 정보">           
+          </div>          
+        </li>
+        <li><img src="../../img/bg3.jpg" alt="배경3"/>
+          <div class="copy">
+              <img src="../../img/bg_copy03.png" alt="대한민국이 안심할 수 있도록 든든한 해양정보">
+          </div>
+        </li>
+      </ul>
+      <link rel="stylesheet" href="../../plugins/bxslider/dist/jquery.bxslider.min.css">
+      <script src="../../plugins/bxslider/dist/jquery.bxslider.min.js"></script>
+      <script>
+        $(function() {
+          // bxslider : https://bxslider.com/options/
+          $('.slider').bxSlider({
+            // mode:'horizontal', 'vertical', 'fade'
+            mode:'vertical',
+            slideSelector: 'li',
+            auto:true,
+          });
+        });
+      </script>
     </div>
     <div class="notice_area">
       <p>[긴급]긴급전달사항 공지합니다.</p>
