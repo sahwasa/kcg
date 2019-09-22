@@ -387,8 +387,8 @@ td .axi{margin-right:0;}
 .dl_devide_9 .w_3{width:calc(100% / 9 * 3);}
 .dl_devide_9 .w_3-4{width:calc(100% / 9 * 3.4);}
 .dl_devide_9 .mr-2{margin-right:calc(100% / 9 * 0.2)}
-.dl_devide_9 .w_4{width:calc(100% / 9 * 4);;}
-.dl_devide_9 .w_5{width:calc(100% / 9 * 5);}
+.dl_devide_9 .w_4{width:calc(100% / 9 * 4);}
+.dl_devide_9 .w_5{width:calc((100% /9 * 5) - 1px );}
 .dl_devide_9 .w_6{width:calc(100% / 9 * 6);}
 .dl_devide_9 .w_7{width:calc(100% / 9 * 7);}
 .dl_devide_9 .w_8{width:calc(100% / 9 * 8);}
